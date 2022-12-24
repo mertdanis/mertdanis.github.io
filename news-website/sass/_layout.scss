@@ -1,0 +1,309 @@
+body {
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+}
+
+.header {
+  grid-column: 2 / 5;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 2rem;
+  color: hsl(236, 13%, 42%);
+
+  @media only screen and (max-width: 1140px) {
+    flex-direction: column;
+    margin: 3rem 0 -1rem 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 45rem) {
+    margin-top: -3rem;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+
+    @media only screen and (max-width: 1140px) {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+  }
+
+  &__item {
+    padding: 0.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    transform: translateX(-2.5rem);
+    margin: 1rem;
+    transition: color 500ms;
+    &:hover {
+      color: hsl(5, 85%, 63%);
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+    height: 4.5rem;
+    transform: translateX(-2.5rem);
+  }
+}
+
+.content {
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
+
+  @media only screen and (max-width: 1430px) {
+    grid-row: 2 / 3;
+    grid-column: 3/ 4;
+  }
+
+  &__img {
+    width: 100%;
+    cursor: pointer;
+
+    @media only screen and (max-width: 1430px) {
+      height: 25rem;
+      width: 25rem;
+      background-position: center;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0;
+
+    @media only screen and (max-width: 1430px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 7rem;
+    color: #0f1329;
+    @media only screen and (max-width: 1670px) {
+      font-size: 5rem;
+      font-weight: 900;
+    }
+
+    @media only screen and (max-width: 1430px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-size: 2rem;
+    margin-top: 3rem;
+    line-height: 1.6;
+
+    @media only screen and (max-width: 1670px) {
+      font-size: 1.7rem;
+    }
+
+    @media only screen and (max-width: 1430px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn {
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem;
+    font-weight: 400;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 500ms;
+    letter-spacing: 3px;
+    &:hover {
+      background-color: rgba($color: #0f1329, $alpha: 1);
+    }
+
+    @media only screen and (max-width: 1670px) {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.sidebar {
+  background-color: hsl(240, 100%, 5%);
+  grid-column: 4/5;
+  grid-row: 2 / 3;
+  padding: 1.4rem;
+  font-size: 2.3rem;
+  color: rgb(187, 187, 187);
+  width: 80%;
+  line-height: 1.5;
+  // height: fit-content;
+
+  @media only screen and (max-width: 1430px) {
+    grid-column: 3 / 4;
+    grid-row: 3/ 4;
+    width: 100%;
+    padding: 0;
+  }
+
+  &__title {
+    color: hsl(35, 77%, 62%);
+    font-weight: 600;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__item {
+    padding: 2.3rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid hsl(236, 13%, 42%);
+    }
+
+    &--p {
+      font-size: 2.2rem;
+
+      @media only screen and (max-width: 1800px) {
+        font-size: 1.6rem;
+      }
+
+      @media only screen and (max-width: 1670px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--title {
+      font-size: 2.5rem;
+      @media only screen and (max-width: 1800px) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (max-width: 1615px) {
+        font-size: 1.6rem;
+      }
+
+      color: hsl(36, 100%, 99%);
+
+      margin-bottom: 2rem;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 2.3rem;
+      transition: color 300ms;
+      cursor: pointer;
+      &:hover {
+        color: hsl(35, 77%, 62%);
+      }
+    }
+  }
+}
+
+.content-2--small {
+  grid-gap: 2.2rem;
+  grid-column: 2 / 5;
+  grid-row: 4/ 5;
+  color: black;
+  display: flex;
+
+  padding: 2rem 0;
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 1560px) {
+    font-size: 70%;
+  }
+
+  @media only screen and (max-width: 1430px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: 15rem;
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: 1430px) {
+      font-size: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    color: #0f1329;
+    display: inline-block;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    transition: color 300ms;
+    cursor: pointer;
+    &:hover {
+      color: orangered;
+    }
+  }
+
+  &__num {
+    color: gray;
+    opacity: 0.5;
+    font-weight: 600;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__desc {
+    font-size: 1.7rem;
+    color: gray;
+    width: 75%;
+    line-height: 1.4;
+  }
+}
+
+.footer {
+  display: flex;
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+  margin: 4rem 0;
+  color: gray;
+
+  @media only screen and (max-width: 40rem) {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  & a {
+    color: #0f1329;
+    text-decoration: none;
+    transition: color 300ms;
+
+    &:hover {
+      color: hsl(5, 85%, 63%);
+    }
+  }
+}
