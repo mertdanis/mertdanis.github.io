@@ -1,0 +1,217 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 1200px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+body {
+  background: linear-gradient(to right bottom, rgb(114, 42, 42), black);
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  font-family: "Lexend Giga", sans-serif !important;
+}
+@media only screen and (max-width: 500px) {
+  body {
+    min-width: 100vw;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 30vh;
+}
+@media only screen and (max-width: 1200px) {
+  .section1 {
+    margin-right: 0;
+  }
+}
+.section1 h2 {
+  font-size: 5rem;
+  margin: 1rem;
+}
+.section1 span {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1200px) {
+  .section2 {
+    margin-top: 5rem;
+  }
+}
+
+.cark {
+  background-color: white;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 1rem 0px rgba(0, 0, 0, 0.75);
+}
+
+.cark-p {
+  font-size: 2rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+.kararbtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  color: rgb(114, 42, 42);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 5px 5px 1rem 0px rgba(0, 0, 0, 0.75);
+  transition: color 500ms;
+}
+.kararbtn:hover {
+  color: black;
+}
+
+#inputArea {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+  font-size: 1.7rem;
+  box-shadow: 5px 5px 1rem 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: 300;
+  color: rgb(114, 42, 42);
+}
+#inputArea::-moz-placeholder {
+  color: rgb(114, 42, 42);
+  font-weight: 400;
+}
+#inputArea:-ms-input-placeholder {
+  color: rgb(114, 42, 42);
+  font-weight: 400;
+}
+#inputArea::placeholder {
+  color: rgb(114, 42, 42);
+  font-weight: 400;
+}
+
+.add_btn,
+.info_btn {
+  color: white;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  transition: all 500ms;
+}
+.add_btn:hover,
+.info_btn:hover {
+  opacity: 0.7;
+}
+
+.inplus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.winner {
+  background-color: rgb(11, 238, 11) !important;
+}
+
+.optiondiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.optiondiv p {
+  box-shadow: 5px 5px 1rem 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 40rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  font-size: 2rem;
+  padding: 1rem;
+  color: rgb(114, 42, 42);
+  background-color: white;
+  justify-content: center;
+  margin: 1rem;
+  text-transform: uppercase;
+  transition: transform 500ms;
+}
+
+.option_rule {
+  position: relative;
+}
+
+.min-option {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 1.7rem;
+  left: 4rem;
+  font-size: 1.3rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transition: all 1s;
+}
+.min-option--show {
+  opacity: 1;
+  visibility: visible;
+}/*# sourceMappingURL=home.css.map */
