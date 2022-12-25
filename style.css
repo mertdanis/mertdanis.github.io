@@ -14,3 +14,9 @@ html {
   flex-direction: column;
   font-size: 2rem;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
