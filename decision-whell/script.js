@@ -1,6 +1,6 @@
 let inputArea = document.querySelector(`#inputArea`);
 let addBtn = document.querySelector(`.add_btn`);
-let kararbtn = document.querySelector(`.kararbtn`);
+let decideNow = document.querySelector(`.kararbtn`);
 let infoBtn = document.querySelector(`.info_btn`);
 let cark = document.querySelector(`.cark`);
 let optiondiv = document.querySelector(`.optiondiv `);
@@ -22,10 +22,6 @@ let addOptionHandler = function () {
       let optionvalue = inputArea.value;
       data.push(optionvalue);
       inputArea.value = "";
-      optiondivall.forEach(function (currentValue, index, arr) {
-        console.log(currentValue);
-        currentValue;
-      });
     }
   };
 
@@ -54,18 +50,31 @@ let whellHandler = function () {
   validrandomNumbers.push(randomnumberGenerator());
   carkP.textContent = data[randomN];
   data.splice(randomN, 1);
-  console.log(`${data.length} data uzunlugu`);
+
+  let optionNode = document.querySelectorAll(`.optiondiv--value`);
+  // let optionCheck = optionNode.item(randomN);
+  let optionNodeArray = Array.prototype.slice.call(optionNode);
+  console.log(optionNodeArray);
+  console.log(optionNodeArray.splice(randomN, 1));
+  let check = optionNodeArray.splice(randomN, 1);
+
+  console.log(check);
+
+  check.classList.add(`winner`);
+
+  // console.log(slice);
+
+  // console.log(optionNodeArray);
+
   loopFunc();
 };
 
 let decisionBtnFunc = function () {
   let click = 0;
-  kararbtn.addEventListener(`click`, function () {
+  decideNow.addEventListener(`click`, function () {
     if (data.length > 1) {
       whellHandler();
-      let optionCheck = document.querySelectorAll(".optiondiv :nth-child(odd)");
-
-      console.log(optionCheck);
+      console.log(randomN);
     } else if ((data.length = 1)) {
       click++;
       carkP.textContent = data[0];
