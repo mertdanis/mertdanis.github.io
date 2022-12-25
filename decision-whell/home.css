@@ -99,6 +99,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+  width: 90%;
   font-family: inherit;
   border-radius: 1.5rem;
   padding: 1.5rem;

@@ -4,13 +4,15 @@ let decideNow = document.querySelector(`.kararbtn`);
 let infoBtn = document.querySelector(`.info_btn`);
 let cark = document.querySelector(`.cark`);
 let optiondiv = document.querySelector(`.optiondiv `);
-
 let optiondivall = document.querySelectorAll(`.optiondiv`);
-
 let carkP = document.querySelector(`.cark-p`);
-
 let data = [];
-let validrandomNumbers = [];
+
+let optionNodeArray = [];
+
+var optionNode = document.querySelectorAll(".optiondiv--value");
+
+var optionNodeArraynew = Array.from(optionNodeArray);
 
 let addOptionHandler = function () {
   let addOption = function () {
@@ -21,6 +23,8 @@ let addOptionHandler = function () {
       optiondiv.appendChild(createp);
       let optionvalue = inputArea.value;
       data.push(optionvalue);
+      optionNodeArray.push(optionNodeArraynew);
+
       inputArea.value = "";
     }
   };
@@ -47,24 +51,11 @@ let randomnumberGenerator = function () {
 };
 
 let whellHandler = function () {
-  validrandomNumbers.push(randomnumberGenerator());
+  randomnumberGenerator();
   carkP.textContent = data[randomN];
   data.splice(randomN, 1);
 
-  let optionNode = document.querySelectorAll(`.optiondiv--value`);
-  // let optionCheck = optionNode.item(randomN);
-  let optionNodeArray = Array.prototype.slice.call(optionNode);
-  console.log(optionNodeArray);
-  console.log(optionNodeArray.splice(randomN, 1));
-  let check = optionNodeArray.splice(randomN, 1);
-
-  console.log(check);
-
-  check.classList.add(`winner`);
-
-  // console.log(slice);
-
-  // console.log(optionNodeArray);
+  console.log(optionNodeArraynew);
 
   loopFunc();
 };
