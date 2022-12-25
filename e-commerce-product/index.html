@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/e-commerce-product/css/main.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <header class="header">
+    <img src="/images/logo.svg" alt="logo" class="header__logo" />
+    <ul class="header__list">
+      <li class="header__item">collections</li>
+      <li class="header__item">men</li>
+      <li class="header__item">women</li>
+      <li class="header__item">about</li>
+      <li class="header__item">contact</li>
+    </ul>
+
+    <div class="header__cart-container">
+      <img src="/images/icon-cart.svg" alt="" class="header__cart-btn" />
+      <div class="header__cart-btn--number">0</div>
+
+      <div class="header__cart-btn--abs">
+        <p class="header__cart-btn--abs---title">Cart</p>
+
+        <div class="header__cart-btn--abs--empty">
+          <p>Your cart is empty.</p>
+        </div>
+
+        <div class="header__cart-btn--abs---flex">
+          <img
+            src="/images/image-product-1-thumbnail.jpg"
+            class="header__cart-btn--abs---img"
+          />
+          <div class="header__cart-btn--abs---flex2">
+            <p class="header__cart-btn--abs---ordername"></p>
+            <div class="header__cart-btn--abs---containercol">
+              <p class="header__cart-btn--abs---price">0</p>
+              <p>x</p>
+              <p class="header__cart-btn--abs---ordernumber">0</p>
+              <p class="header__cart-btn--abs---totalprice">0</p>
+            </div>
+          </div>
+          <img
+            src="/images/icon-delete.svg"
+            alt=""
+            class="header__cart-btn--abs---delbtn"
+          />
+        </div>
+        <div class="header__cart-btn--abs---center">
+          <button class="header__cart-btn--abs---checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <img src="/images/image-avatar.png" alt="" class="header__profile" />
+  </header>
+  <body>
+    <div class="flex-container">
+      <div class="section1">
+        <img src="/images/image-product-1.jpg" class="section1__main-img" />
+        <div class="section1__thumbnails">
+          <img
+            src="/images/image-product-1-thumbnail.jpg"
+            class="section1__thumbnail thumbnail1 thumbnail--active"
+          />
+          <img
+            src="/images/image-product-2-thumbnail.jpg"
+            class="section1__thumbnail thumbnail2"
+          />
+          <img
+            src="/images/image-product-3-thumbnail.jpg"
+            class="section1__thumbnail thumbnail3"
+          />
+          <img
+            src="/images/image-product-4-thumbnail.jpg"
+            class="section1__thumbnail thumbnail4"
+          />
+        </div>
+      </div>
+
+      <div class="section2">
+        <h4 class="section2__title-orange">sneaker company</h4>
+
+        <div class="section2__content">
+          <div class="section2__content-title">
+            fall limited edition sneakers
+          </div>
+          <div class="section2__content-desc">
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they'll withstand
+              everything the weather can offer.
+            </p>
+          </div>
+          <div class="section2__content-price--box">
+            <div class="section2__content--price--box---flex">
+              <p class="price">$125.00</p>
+              <p class="price-high">$250.00</p>
+            </div>
+            <p class="price-discount">50%</p>
+          </div>
+        </div>
+
+        <div class="section2__buy">
+          <div class="section2__buy-total--container">
+            <img src="/images/icon-minus.svg" class="section2__buy-minus" />
+            <p class="section2__buy-total">0</p>
+            <img src="/images/icon-plus.svg" class="section2__buy-plus" />
+          </div>
+          <div class="section2__buy--addtocart">
+            <img src="/images/icon-cart.svg" class="section2__buy--cart" />
+            <p class="section2__buy-p">Add to cart</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/mertdanis" target="_blank">M.D.</a>.
+    </div> -->
+
+    <div class="popup">
+      <div class="popup__main">
+        <img
+          src="/images/image-product-1.jpg"
+          alt=""
+          class="popup__main--img"
+        />
+        <div class="popup__close">
+          <img src="/images/icon-close.svg" alt="" class="popup__close--img" />
+        </div>
+        <div class="popup__buttons">
+          <img src="/images/icon-previous.svg" alt="" class="popup__prev" />
+          <img src="/images/icon-next.svg" alt="" class="popup__next" />
+        </div>
+
+        <div class="popup__images">
+          <img
+            src="/images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="popup__images--img section1__thumbnail"
+          />
+          <img
+            src="/images/image-product-2-thumbnail.jpg"
+            alt=""
+            class="popup__images--img section1__thumbnail"
+          />
+          <img
+            src="/images/image-product-3-thumbnail.jpg"
+            alt=""
+            class="popup__images--img section1__thumbnail"
+          />
+          <img
+            src="/images/image-product-4-thumbnail.jpg"
+            alt=""
+            class="popup__images--img section1__thumbnail"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="/e-commerce-product/app.js"></script>
+  </body>
+</html>
