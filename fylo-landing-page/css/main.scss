@@ -522,6 +522,32 @@ html {
 
 // responsive layout...
 
+@media only screen and (max-width: 380px) {
+  .header {
+    &__list {
+      font-size: 1.3rem !important;
+    }
+  }
+
+  .section1 {
+    &__img {
+      width: 50vw !important;
+    }
+
+    &__title {
+      font-size: 2.3rem !important;
+    }
+
+    &__desc {
+      font-size: 1.5rem !important;
+    }
+  }
+
+  .section6__logo {
+    height: 4rem !important;
+  }
+}
+
 @media only screen and (max-width: 1120px) {
   .container {
     display: flex;
@@ -620,7 +646,7 @@ html {
     }
 
     &__href {
-      margin-bottom: 15rem;
+      margin-bottom: 5rem;
       text-align: center;
     }
   }
@@ -631,7 +657,7 @@ html {
     margin: 0;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15rem;
+    margin-bottom: 2rem;
     &__content {
       margin: 2rem;
       padding: 0;
@@ -692,14 +718,16 @@ html {
   .section6 {
     &__logo {
       height: 5rem;
+      display: inline-block;
       transform: none;
-      margin: 5rem;
+      margin: 5rem 10rem 5rem 10rem;
     }
 
     &__desc--container {
       font-size: 1.6rem;
-      justify-content: center;
+
       width: 70%;
+
       margin: 3rem 0 3rem 0;
     }
 
