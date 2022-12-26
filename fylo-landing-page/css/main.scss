@@ -528,7 +528,8 @@ html {
 
   .section1 {
     &__img {
-      width: 50vw !important;
+      width: 70vw !important;
+      margin-top: -5rem !important;
     }
 
     &__title {
@@ -575,8 +576,8 @@ html {
 
   .section1 {
     &__img {
-      margin-top: -5rem;
-      width: 70vw;
+      margin-top: 10rem;
+      width: 50vw;
     }
 
     & h2 {

@@ -455,7 +455,8 @@ html {
     font-size: 1.3rem !important;
   }
   .section1__img {
-    width: 50vw !important;
+    width: 70vw !important;
+    margin-top: -5rem !important;
   }
   .section1__title {
     font-size: 2.3rem !important;
@@ -493,8 +494,8 @@ html {
     margin: 0;
   }
   .section1__img {
-    margin-top: -5rem;
-    width: 70vw;
+    margin-top: 10rem;
+    width: 50vw;
   }
   .section1 h2 {
     font-size: 3rem;
