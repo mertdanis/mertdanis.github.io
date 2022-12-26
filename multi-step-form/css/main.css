@@ -226,8 +226,7 @@ html {
 .section__right-summary {
   width: 80%;
 }
-.section__right-summary--sec1,
-.section__right-summary--sec2 {
+.section__right-summary--sec1, .section__right-summary--sec2 {
   background-color: hsl(231deg, 100%, 99%);
 }
 .section__right-summary--sec1 {
@@ -263,10 +262,4 @@ html {
 .section__right-summary--sec3---price {
   color: hsl(243deg, 100%, 62%);
   font-weight: 500;
-} /*# sourceMappingURL=main.css.map */
-
-.hidden {
-  display: none;
-  visibility: hidden;
-  pointer-events: none;
-}
+}/*# sourceMappingURL=main.css.map */

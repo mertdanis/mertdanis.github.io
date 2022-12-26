@@ -29,15 +29,6 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 500px) {
-  .container p,
-.container h2,
-.container h4,
-.container h3 {
-    font-size: 1.5rem !important;
-  }
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -459,14 +450,13 @@ html {
   margin-left: 10rem;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 400px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 400px;
   }
   .header {
     display: flex;
@@ -474,6 +464,9 @@ html {
   }
   .header__logo {
     height: 4rem;
+  }
+  .section1 {
+    width: 100vw;
   }
   .section1 h2 {
     font-size: 3rem;
@@ -492,5 +485,32 @@ html {
   }
   .section2 h4 {
     font-size: 1.8rem;
+  }
+  .section3 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }
+  .section3__title {
+    font-size: 5rem;
+  }
+  .section3__right {
+    width: auto;
+    margin: 1rem 0;
+  }
+  .section4 {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .section4__content {
+    margin: 2rem;
+    padding: 0;
+    width: 30rem;
+  }
+  .section4__content--desc {
+    font-size: 1.2rem;
+    margin: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */

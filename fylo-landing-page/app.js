@@ -4,7 +4,7 @@ let emailBtn = document.querySelector(`.section5__submit`);
 let errorP = document.querySelector(`.section5__error`);
 
 let checkvalidEmail = function () {
-  if (!email.value.includes(`@`)) {
+  if (!email.value.includes(`@`) && email.value != ``) {
     errorP.classList.add(`section5__error-active`);
     errorP.textContent = `Please enter a valid email address`;
     console.log(`not valid`);
@@ -20,4 +20,4 @@ let checkvalidEmail = function () {
   console.log(`valid`);
 };
 
-emailBtn.addEventListener(`click`, setInterval(checkvalidEmail, 1000));
+email.addEventListener(`click`, setInterval(checkvalidEmail, 1000));
