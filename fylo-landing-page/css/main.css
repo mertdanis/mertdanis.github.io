@@ -112,6 +112,10 @@ html {
   z-index: 11;
   transition: all 500ms;
 }
+.section1__button a {
+  color: inherit;
+  text-decoration: none;
+}
 .section1__button:hover {
   background-color: hsl(176deg, 68%, 40%);
 }

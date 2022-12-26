@@ -129,6 +129,12 @@ html {
     width: 25rem;
     z-index: 11;
     transition: all 500ms;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     &:hover {
       background-color: hsl(176, 68%, 40%);
     }
