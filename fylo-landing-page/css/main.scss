@@ -34,11 +34,6 @@ html {
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 1100px) {
-    display: flex;
-    flex-direction: column;
-  }
-
   height: 5vh;
   padding: 5rem 0 1rem 0;
   background-color: hsl(217, 28%, 15%);
@@ -47,7 +42,7 @@ html {
     height: 6rem;
     cursor: pointer;
     margin-left: 20rem;
-
+    transition: opacity 300ms;
     &:hover {
       opacity: 0.6;
     }
@@ -58,7 +53,6 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 1.8rem;
-    flex-wrap: wrap;
 
     list-style-type: none;
     margin-left: auto;
@@ -70,9 +64,9 @@ html {
       & a {
         color: white;
         opacity: 0.7;
+        transition: opacity 300ms;
 
         text-decoration: none;
-
         &:hover {
           text-decoration: underline;
           opacity: 1;
@@ -144,12 +138,12 @@ html {
 .section2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  grid-row-gap: 12rem;
   margin: 10rem 20rem 10rem 20rem;
   color: white;
 
   &__img {
-    width: 8rem;
+    height: 9rem;
   }
   &__content {
     z-index: 9;
@@ -157,11 +151,9 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &:not(:first-child) {
-      margin-top: 3rem;
-    }
+
     &--title {
-      font-size: 3rem;
+      font-size: 2.7rem;
       font-weight: 700;
 
       margin: 3rem 1rem 1rem 1rem;
@@ -171,7 +163,6 @@ html {
       width: 70%;
       font-size: 2rem;
       text-align: center;
-
       @media only screen and (max-width: 1300px) {
         font-size: 2em;
       }
@@ -196,12 +187,12 @@ html {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 5rem 10rem;
+    margin: 10rem 10rem 5rem 10rem;
   }
 
   &__title {
     font-size: 5rem;
-    font-weight: 700;
+
     margin-bottom: 2rem;
     width: 70%;
   }
@@ -215,7 +206,7 @@ html {
 
   &__href {
     font-size: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     width: max-content;
     border-bottom: 1px solid hsl(176, 68%, 64%);
     display: flex;
@@ -271,11 +262,11 @@ html {
       font-weight: 700;
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
-      font-family: "Raleway" !important;
+      font-family: "Open sans" !important;
     }
 
     &--ceo {
-      font-weight: normal;
+      font-weight: 700;
       color: hsl(0, 2%, 82%);
     }
 
@@ -425,7 +416,7 @@ html {
     margin: 10rem 10rem 0 10rem;
   }
   &__logo {
-    height: 7rem;
+    height: 6rem;
     margin: 5rem;
     cursor: pointer;
     transform: translateY(20rem);
@@ -436,8 +427,8 @@ html {
   }
 
   &__location--svg {
+    margin-right: 5rem;
     height: 3rem;
-    margin-right: 3rem;
   }
 
   &__desc {
@@ -446,7 +437,7 @@ html {
 
   &__desc--container {
     font-size: 2rem;
-    width: 35%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -507,28 +498,64 @@ html {
   &__social {
     margin-left: 10rem;
   }
+
+  &__fb,
+  &__tw,
+  &__ig {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: color 300ms;
+  }
+
+  &__fb:hover {
+    color: #4267b2;
+  }
+
+  &__tw:hover {
+    color: #1da1f2;
+  }
+
+  &__ig:hover {
+    color: #c13584;
+  }
 }
 
-@media only screen and (max-width: 400px) {
+// responsive layout...
+
+@media only screen and (max-width: 1120px) {
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
   }
 
   .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 3rem;
+    &__list {
+      flex-direction: row;
+      font-size: 1.5rem;
+      margin: 0;
+      &-item {
+        margin: 1rem;
+        padding: 0;
+      }
+    }
 
     &__logo {
-      height: 4rem;
+      height: 3rem;
+      margin: 0;
     }
   }
 
   .section1 {
-    width: 100vw;
+    &__img {
+      margin-top: 10rem;
+      width: 85vw;
+    }
+
     & h2 {
       font-size: 3rem;
     }
@@ -538,13 +565,27 @@ html {
     &__button {
       width: 20%;
     }
+
+    &__title {
+      font-size: 1.6rem;
+      width: 80%;
+    }
+
+    &__desc {
+      width: 80%;
+    }
+
+    &__button {
+      width: 80%;
+      margin-bottom: 3rem;
+    }
   }
 
   .section2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+    margin: 0;
 
     & h4 {
       font-size: 1.8rem;
@@ -552,18 +593,35 @@ html {
   }
 
   .section3 {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     margin: 1rem;
 
+    &__img {
+      width: 90vw;
+      margin: 10rem 0 5rem 0;
+    }
+
+    &__desc,
+    &__desc2 {
+      width: 80%;
+      font-size: 1.8rem;
+    }
+
     &__title {
-      font-size: 5rem;
+      font-size: 3rem;
     }
 
     &__right {
       width: auto;
       margin: 1rem 0;
+      align-items: center;
+    }
+
+    &__href {
+      margin-bottom: 15rem;
+      text-align: center;
     }
   }
 
@@ -571,6 +629,9 @@ html {
     flex-direction: column;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
     &__content {
       margin: 2rem;
       padding: 0;
@@ -579,6 +640,92 @@ html {
         font-size: 1.2rem;
         margin: 1rem;
       }
+
+      &:hover {
+        transform: none;
+      }
+    }
+    &__quote {
+      width: 3rem;
+      top: -2rem;
+      left: 4rem;
+    }
+  }
+
+  .section5 {
+    width: auto;
+    padding: 0;
+    align-items: center;
+
+    margin: 3rem;
+
+    &__title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 3rem 0 0 0;
+    }
+
+    &__desc {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      width: 80%;
+    }
+
+    &__form {
+      width: auto;
+      width: 60vw;
+    }
+
+    &__submit {
+      margin-left: 0;
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    &__form-area {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .section6 {
+    &__logo {
+      height: 5rem;
+      transform: none;
+      margin: 5rem;
+    }
+
+    &__desc--container {
+      font-size: 1.6rem;
+      justify-content: center;
+      width: 70%;
+      margin: 3rem 0 3rem 0;
+    }
+
+    &__contact--area {
+      margin: 0 0 3rem 0;
+    }
+
+    &__list {
+      margin: 2rem 0;
+    }
+
+    &__social {
+      margin: 0;
+    }
+
+    &__challange {
+      text-align: center;
+    }
+
+    &__footer--container {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      font-size: 2rem;
     }
   }
 }
