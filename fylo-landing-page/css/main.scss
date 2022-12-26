@@ -163,9 +163,6 @@ html {
       width: 70%;
       font-size: 2rem;
       text-align: center;
-      @media only screen and (max-width: 1300px) {
-        font-size: 2em;
-      }
     }
   }
 }
@@ -578,8 +575,8 @@ html {
 
   .section1 {
     &__img {
-      margin-top: 10rem;
-      width: 85vw;
+      margin-top: -5rem;
+      width: 70vw;
     }
 
     & h2 {
@@ -587,9 +584,6 @@ html {
     }
     & p {
       font-size: 1.7rem;
-    }
-    &__button {
-      width: 20%;
     }
 
     &__title {
@@ -602,7 +596,7 @@ html {
     }
 
     &__button {
-      width: 80%;
+      width: 60%;
       margin-bottom: 3rem;
     }
   }
@@ -625,8 +619,8 @@ html {
     margin: 1rem;
 
     &__img {
-      width: 90vw;
-      margin: 10rem 0 5rem 0;
+      width: 40vw;
+      margin: 10rem auto 5rem auto;
     }
 
     &__desc,

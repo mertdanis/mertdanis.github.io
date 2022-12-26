@@ -143,11 +143,6 @@ html {
   font-size: 2rem;
   text-align: center;
 }
-@media only screen and (max-width: 1300px) {
-  .section2__content--desc {
-    font-size: 2em;
-  }
-}
 
 .section3 {
   display: flex;
@@ -498,17 +493,14 @@ html {
     margin: 0;
   }
   .section1__img {
-    margin-top: 10rem;
-    width: 85vw;
+    margin-top: -5rem;
+    width: 70vw;
   }
   .section1 h2 {
     font-size: 3rem;
   }
   .section1 p {
     font-size: 1.7rem;
-  }
-  .section1__button {
-    width: 20%;
   }
   .section1__title {
     font-size: 1.6rem;
@@ -518,7 +510,7 @@ html {
     width: 80%;
   }
   .section1__button {
-    width: 80%;
+    width: 60%;
     margin-bottom: 3rem;
   }
   .section2 {
@@ -535,8 +527,8 @@ html {
     margin: 1rem;
   }
   .section3__img {
-    width: 90vw;
-    margin: 10rem 0 5rem 0;
+    width: 40vw;
+    margin: 10rem auto 5rem auto;
   }
   .section3__desc, .section3__desc2 {
     width: 80%;
