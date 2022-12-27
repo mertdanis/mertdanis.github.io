@@ -7,25 +7,35 @@ let optiondiv = document.querySelector(`.optiondiv `);
 let optiondivall = document.querySelectorAll(`.optiondiv`);
 let carkP = document.querySelector(`.cark-p`);
 let data = [];
-
-let optionNodeArray = [];
-
-var optionNode = document.querySelectorAll(".optiondiv--value");
-
-var optionNodeArraynew = Array.from(optionNodeArray);
+let optionEl = [];
 
 let addOptionHandler = function () {
   let addOption = function () {
     if (inputArea.value != ``) {
+      let createDiv = document.createElement(`div`);
       let createp = document.createElement(`p`);
+      let delBtn = document.createElement(`p`);
+      createDiv.classList.add(`div-flex`);
       createp.classList.add(`optiondiv--value`);
+      delBtn.classList.add(`delBtn`);
       createp.textContent = inputArea.value;
-      optiondiv.appendChild(createp);
+      delBtn.innerHTML = `<ion-icon name="close-outline"></ion-icon>`;
+      createp.appendChild(delBtn);
+      createDiv.appendChild(createp);
+      optiondiv.appendChild(createDiv);
       let optionvalue = inputArea.value;
       data.push(optionvalue);
-      optionNodeArray.push(optionNodeArraynew);
+      optionEl.push(createp);
 
       inputArea.value = "";
+
+      delBtn.addEventListener(`click`, (e) => {
+        let del = e.target.closest(`.optiondiv--value`);
+        createDiv.removeChild(del);
+        let delIndex = optionEl.indexOf(del);
+        data.splice(delIndex, 1);
+        optionEl.splice(delIndex, 1);
+      });
     }
   };
 
@@ -55,24 +65,16 @@ let whellHandler = function () {
   carkP.textContent = data[randomN];
   data.splice(randomN, 1);
 
-  console.log(optionNodeArraynew);
+  optionEl[randomN].classList.add(`winner`);
+  optionEl.splice(randomN, 1);
 
   loopFunc();
 };
 
 let decisionBtnFunc = function () {
-  let click = 0;
   decideNow.addEventListener(`click`, function () {
-    if (data.length > 1) {
+    if (data.length > 0) {
       whellHandler();
-      console.log(randomN);
-    } else if ((data.length = 1)) {
-      click++;
-      carkP.textContent = data[0];
-
-      if (click < 1) {
-        loopFunc();
-      }
     }
   });
 };

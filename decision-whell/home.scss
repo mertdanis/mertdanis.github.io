@@ -30,13 +30,6 @@ body {
   object-fit: cover;
   background-size: cover;
   font-family: "Lexend Giga", sans-serif !important;
-
-  @media only screen and (max-width: 500px) {
-    min-width: 100vw;
-    min-height: max-content;
-    padding: 0;
-    margin: 0;
-  }
 }
 
 .section1 {
@@ -47,10 +40,6 @@ body {
   border-radius: 10px;
   padding: 5px;
   margin-right: 30vh;
-
-  @media only screen and (max-width: 1200px) {
-    margin-right: 0;
-  }
 
   & h2 {
     font-size: 5rem;
@@ -68,10 +57,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  @media only screen and (max-width: 1200px) {
-    margin-top: 5rem;
-  }
 }
 
 .cark {
@@ -126,9 +111,6 @@ body {
   font-weight: 300;
   color: rgb(114, 42, 42);
 
-  &:focus {
-  }
-
   &::placeholder {
     color: rgb(114, 42, 42);
     font-weight: 400;
@@ -165,35 +147,44 @@ body {
 .optiondiv {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  & p {
-    box-shadow: $box-shadow;
+  &--value {
     display: flex;
+    justify-content: space-between;
+  }
+
+  .optiondiv--value {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: fit-content;
+    box-shadow: $box-shadow;
     width: 40rem;
     border: none;
     outline: none;
     border-radius: 2rem;
     font-size: 2rem;
     padding: 1rem;
-    color: rgb(114, 42, 42);
-    background-color: white;
-    justify-content: center;
+    // color: rgb(114, 42, 42);
+    // background-color: white;
     margin: 1rem;
     text-transform: uppercase;
     transition: transform 500ms;
   }
+}
 
-  // &--value:nth-child() {
-  //   background-color: green;
-  // }
+.delBtn {
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+}
 
-  // &--value---check {
-  //   background-color: green;
-  // }
+.div-flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 .option_rule {
@@ -213,5 +204,33 @@ body {
   &--show {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .section1 {
+    margin: 0;
+    padding: 0;
+    & h2 {
+      text-align: center;
+      font-size: 4rem;
+      width: 90%;
+      margin: 0;
+    }
+  }
+
+  .inplus {
+    flex-direction: column;
+  }
+
+  .optiondiv {
+  }
+
+  .section2 {
+    margin-top: 3rem;
+  }
+
+  .kararbtn {
+    margin-bottom: 2rem;
   }
 }
