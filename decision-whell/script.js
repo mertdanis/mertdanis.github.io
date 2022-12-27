@@ -72,10 +72,9 @@ let whellHandler = function () {
   data.splice(randomN, 1);
   if (format.value == `first`) {
     clickCalc++;
-    console.log(clickCalc);
+
     if (clickCalc == 1) {
       optionEl[randomN].classList.add(`firstWin`);
-      console.log(clickCalc);
     } else if (clickCalc > 1) {
       optionEl[randomN].classList.add(`lastWin`);
     }
