@@ -9,6 +9,12 @@ let carkP = document.querySelector(`.cark-p`);
 let data = [];
 let optionEl = [];
 
+let format = document.querySelector(`#format`);
+
+let randomnumberGenerator = function () {
+  return (randomN = Math.trunc(Math.random() * data.length));
+};
+
 let addOptionHandler = function () {
   let addOption = function () {
     if (inputArea.value != ``) {
@@ -17,24 +23,27 @@ let addOptionHandler = function () {
       let delBtn = document.createElement(`p`);
       createDiv.classList.add(`div-flex`);
       createp.classList.add(`optiondiv--value`);
-      delBtn.classList.add(`delBtn`);
       createp.textContent = inputArea.value;
       delBtn.innerHTML = `<ion-icon name="close-outline"></ion-icon>`;
+      delBtn.classList.add(`delBtn`);
       createp.appendChild(delBtn);
       createDiv.appendChild(createp);
       optiondiv.appendChild(createDiv);
       let optionvalue = inputArea.value;
       data.push(optionvalue);
       optionEl.push(createp);
-
       inputArea.value = "";
-
       delBtn.addEventListener(`click`, (e) => {
         let del = e.target.closest(`.optiondiv--value`);
-        createDiv.removeChild(del);
-        let delIndex = optionEl.indexOf(del);
-        data.splice(delIndex, 1);
-        optionEl.splice(delIndex, 1);
+        if (
+          !del.classList.contains("firstWin") &&
+          !del.classList.contains("lastWin")
+        ) {
+          createDiv.removeChild(del);
+          let delIndex = optionEl.indexOf(del);
+          data.splice(delIndex, 1);
+          optionEl.splice(delIndex, 1);
+        }
       });
     }
   };
@@ -56,16 +65,25 @@ let addOptionHandler = function () {
   });
 };
 
-let randomnumberGenerator = function () {
-  return (randomN = Math.trunc(Math.random() * data.length));
-};
-
+let clickCalc = 0;
 let whellHandler = function () {
   randomnumberGenerator();
   carkP.textContent = data[randomN];
   data.splice(randomN, 1);
-
-  optionEl[randomN].classList.add(`winner`);
+  if (format.value == `first`) {
+    clickCalc++;
+    console.log(clickCalc);
+    if (clickCalc == 1) {
+      optionEl[randomN].classList.add(`firstWin`);
+      console.log(clickCalc);
+    } else if (clickCalc > 1) {
+      optionEl[randomN].classList.add(`lastWin`);
+    }
+  } else if (format.value == `last` && optionEl.length > 1) {
+    optionEl[randomN].classList.add(`lastWin`);
+  } else if (format.value == `last` && optionEl.length == 1) {
+    optionEl[randomN].classList.add(`firstWin`);
+  }
   optionEl.splice(randomN, 1);
 
   loopFunc();

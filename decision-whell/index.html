@@ -23,15 +23,13 @@
       <div class="section1">
         <h2>Decision Wheel</h2>
         <span>No more hesitation!</span>
+
         <div class="inplus">
           <input type="text" id="inputArea" placeholder="Input an option..." />
-          <button class="add_btn">
-            <ion-icon name="add-outline"></ion-icon>
-          </button>
+
+          <button class="add_btn">+</button>
           <div class="option_rule">
-            <button class="info_btn">
-              <ion-icon name="information-outline"></ion-icon>
-            </button>
+            <button class="info_btn">ℹ</button>
             <p class="min-option">Minimum 2 options</p>
           </div>
         </div>
@@ -42,10 +40,23 @@
       </div>
 
       <div class="section2">
-        <div class="cark">
-          <p class="cark-p">?</p>
+        <div class="section1__optionmenu">
+          <h3 class="section1__optionmenu--title">
+            Choose an option for the wheel!
+          </h3>
+          <div class="select">
+            <select name="format" id="format">
+              <option value="first">First roll is the winner</option>
+              <option value="last">Last roll is the winner</option>
+            </select>
+          </div>
         </div>
-        <button class="kararbtn">Decide Now →</button>
+        <div class="cark">
+          <p class="cark-p"><ion-icon name="help-circle-outline"></ion-icon></p>
+        </div>
+        <button class="kararbtn">
+          <p>Decide Now ⮞</p>
+        </button>
       </div>
     </div>
     <script
