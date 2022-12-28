@@ -1,21 +1,25 @@
-let nextBtn = document.querySelector(`.section__right-btn`);
-
+let nextBtn = document.querySelector(`.section__right-bNext`);
+let backBtn = document.querySelector(`.section__right-bBack`);
 let sectionRight = document.querySelector(`.section__right`);
-
-let step1 = document.querySelector(`.step1`);
-
 let stepNumbers = document.querySelectorAll(`.section__left--step---number`);
+let step1Btn = document.querySelector(`#step1Btn`);
+let currentStep = 1;
+let stepSection = document.querySelector(`.section__left--step---number`);
+let steps = document.querySelector(`.step_${currentStep}`);
+let checkBox = document.querySelector(`#checkbox`);
+///////////////////////////////////////////////////////////////
+/// contents
 
-let step2Content = `<div class="step2">
+let step_2_Content = ` <div class="step_2">
 <h3 class="section__right--title">Select your plan</h3>
 <p class="section__right--desc">
   You have the option of monthly or yearly billing.
 </p>
 
 <div class="section__right--options">
-  <div class="section__right--option option1">
+  <div class="section__right--option" id="option1">
     <img
-      src="/imgs/assets/images/icon-arcade.svg"
+      src="/multi-step-form/imgs/assets/images/icon-arcade.svg"
       alt=""
       class="section__right--option-img"
     />
@@ -26,7 +30,7 @@ let step2Content = `<div class="step2">
   </div>
   <div class="section__right--option option2">
     <img
-      src="/imgs/assets/images/icon-advanced.svg"
+      src="/multi-step-form/imgs/assets/images/icon-advanced.svg"
       alt=""
       class="section__right--option-img"
     />
@@ -37,7 +41,7 @@ let step2Content = `<div class="step2">
   </div>
   <div class="section__right--option option3">
     <img
-      src="/imgs/assets/images/icon-pro.svg"
+      src="/multi-step-form/imgs/assets/images/icon-pro.svg"
       alt=""
       class="section__right--option-img"
     />
@@ -48,22 +52,26 @@ let step2Content = `<div class="step2">
   </div>
 </div>
 <div class="section__right-month-year-option">
-  <p class="section__right-month">Monthly</p>
-  <p class="section__right-month">Yearly</p>
+  <p id="monthly" class="section__right--activated">Monthly</p>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round" id="checkbox"></span>
+  </label>
+  <p id="yearly">Yearly</p>
 </div>
-<button class="section__right-btn">Next Step</button>
-</div>
+
+</div
 
 `;
 
-let step3Content = `<div class="step3">
+let step_3_Content = `<div class="step_3">
 <h3 class="section__right--title">Pick add-ons</h3>
 <p class="section__right--desc">
   Add-ons help enhance your gaming experience.
 </p>
 
 <div class="section__right-pick--options">
-  <div class="section__right-pick--option option1">
+  <div class="section__right-pick--option id="option2">
     <input
       type="checkbox"
       name="online"
@@ -93,7 +101,7 @@ let step3Content = `<div class="step3">
     </div>
     <p class="section__right-pick--option---price">+$2/mo</p>
   </div>
-  <div class="section__right-pick--option option3">
+  <div class="section__right-pick--option id="option3">
     <input
       type="checkbox"
       name="online"
@@ -109,12 +117,12 @@ let step3Content = `<div class="step3">
     <p class="section__right-pick--option---price">+$2/mo</p>
   </div>
 </div>
-<button class="section__right-btn">Next Step</button>
+
 </div>
 
 `;
 
-let step4Content = `<div class="step4">
+let step_4_Content = `<div class="step_4">
 <h3 class="section__right--title">Finishing up</h3>
 <p class="section__right--desc">
   Double-check everything looks OK before confirming.
@@ -143,54 +151,103 @@ let step4Content = `<div class="step4">
     <p>Total (per month)</p>
     <p class="section__right-summary--sec3---price">+$12/mo</p>
   </div>
-  <button class="section__right-btn">Confirm</button>
+
 </div>
 </div>
 
 `;
 
-let currentStep = 1;
-console.log(currentStep);
+///////////////////////////////////////////////////////////////
+/// functions
 
-let stepSection = document.querySelector(`.section__left--step---number`);
-nextBtn.addEventListener(`click`, () => {
-  let step2 = document.querySelector(`.step2`);
-  let step3 = document.querySelector(`.step3`);
-  let step4 = document.querySelector(`.step4`);
+let btnsHandler = function () {
+  nextBtn.addEventListener(`click`, () => {
+    if (currentStep == 1) {
+      currentStep++;
 
-  if (currentStep == 1) {
-    currentStep++;
+      let deactiveStep = document.querySelector(
+        `#section__left-number--${currentStep - 1}`
+      );
 
-    let activeStep = document.querySelector(
-      `#section__left-number--${currentStep}`
-    );
-    activeStep.classList.add(`section__left--step---number_active`);
+      deactiveStep.classList.remove(`section__left--step---number_active`);
 
-    step1.classList.add(`hidden`);
+      let activeStep = document.querySelector(
+        `#section__left-number--${currentStep}`
+      );
 
-    sectionRight.insertAdjacentHTML("afterbegin", step2Content);
-  } else if (currentStep == 2) {
-    step2.classList.add(`hidden`);
-    currentStep++;
-    activeStep = document.querySelector(
-      `#section__left-number--${currentStep}`
-    );
-    activeStep.classList.add(`section__left--step---number_active`);
+      activeStep.classList.add(`section__left--step---number_active`);
 
-    sectionRight.insertAdjacentHTML("afterbegin", step3Content);
-  } else if (currentStep == 3) {
-    step3.classList.add(`hidden`);
-    currentStep++;
-    activeStep = document.querySelector(
-      `#section__left-number--${currentStep}`
-    );
-    activeStep.classList.add(`section__left--step---number_active`);
-    sectionRight.insertAdjacentHTML("afterbegin", step4Content);
-  }
-});
+      sectionRight.insertAdjacentHTML("afterbegin", step_2_Content);
+      document
+        .querySelector(`.step_${currentStep - 1}`)
+        .classList.add(`hidden`);
 
-// ==> cozumler
+      let options = document.querySelectorAll(`.section__right--option`);
 
-// next stepe bastigimda step number aktifligi diger stepe gecsin ve
-// section right html degissin
-// bilgileri bir datada topla...
+      options.addEventListener(`click`, (e) => {
+        console.log(e.target);
+      });
+    } else if (currentStep == 2) {
+      currentStep++;
+
+      deactiveStep = document.querySelector(
+        `#section__left-number--${currentStep - 1}`
+      );
+      deactiveStep.classList.remove(`section__left--step---number_active`);
+      activeStep = document.querySelector(
+        `#section__left-number--${currentStep}`
+      );
+      activeStep.classList.add(`section__left--step---number_active`);
+
+      sectionRight.insertAdjacentHTML("afterbegin", step_3_Content);
+      document
+        .querySelector(`.step_${currentStep - 1}`)
+        .classList.add(`hidden`);
+    } else if (currentStep == 3) {
+      currentStep++;
+      document.querySelector(`.step_${currentStep}`);
+      deactiveStep = document.querySelector(
+        `#section__left-number--${currentStep - 1}`
+      );
+
+      deactiveStep.classList.remove(`section__left--step---number_active`);
+
+      activeStep = document.querySelector(
+        `#section__left-number--${currentStep}`
+      );
+
+      activeStep.classList.add(`section__left--step---number_active`);
+
+      sectionRight.insertAdjacentHTML("afterbegin", step_4_Content);
+      document
+        .querySelector(`.step_${currentStep - 1}`)
+        .classList.add(`hidden`);
+    }
+  });
+
+  backBtn.addEventListener(`click`, () => {
+    if (currentStep > 1) {
+      currentStep--;
+
+      console.log(currentStep);
+
+      let deactiveStep = document.querySelector(
+        `#section__left-number--${currentStep + 1}`
+      );
+
+      deactiveStep.classList.remove(`section__left--step---number_active`);
+
+      let activeStep = document.querySelector(
+        `#section__left-number--${currentStep}`
+      );
+
+      activeStep.classList.add(`section__left--step---number_active`);
+      document
+        .querySelector(`.step_${currentStep + 1}`)
+        .classList.add(`hidden`);
+      document.querySelector(`.step_${currentStep}`).classList.remove(`hidden`);
+    }
+  });
+};
+
+btnsHandler();
