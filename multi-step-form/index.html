@@ -9,7 +9,7 @@
       rel="shortcut icon"
       href="/multi-step-form/imgs/assets/images/favicon-32x32.png"
       type="image/x-icon"
-    />s
+    />
     <link rel="stylesheet" href="/multi-step-form/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,8 +76,12 @@
         </div>
       </div>
 
+
+      
       <div class="section__right">
-         <div class="step_1">
+
+  
+    <div class="step_1">
           <h3 class="section__right--title">Personal info</h3>
           <p class="section__right--desc">
             Please provide your name, email address, and phone number.
@@ -88,13 +92,16 @@
 
             <input
               class="section__right--form---input"
+              id="form__name"
               type="text"
+           
               placeholder="e.g. Stephen King"
             />
 
             <p class="section__right--form---title">Email Address</p>
             <input
               class="section__right--form---input"
+              id="form__email"
               type="email"
               placeholder="e.g. stephenking@lorem.com"
             />
@@ -102,17 +109,20 @@
             <p class="section__right--form---title">Phone Number</p>
             <input
               class="section__right--form---input"
-              type="tel"
-              placeholder="e.g. +1 234 567 890"
+              id="form__tel"
+              type="number"
+             
+              placeholder="e.g. 1 234 567 890"
+              
             />
           </div>
-        </div>
+        </div> 
         <div class="section__right--btns">
           <button class="section__right-bBack">Go Back</button>
           <button class="section__right-bNext">Next Step</button>
           </div>
        
-    </div>
+    </div> 
     <script src="/multi-step-form/app.js"></script>
   </body>
 </html>

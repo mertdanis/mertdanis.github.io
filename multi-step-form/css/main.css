@@ -174,6 +174,9 @@ input:checked + .slider:before {
   font-size: 2rem;
   transform: translateX(8rem);
 }
+.section__right--step5 {
+  transform: none;
+}
 .section__right--activated {
   color: hsl(213deg, 96%, 18%);
 }
@@ -238,6 +241,12 @@ input:checked + .slider:before {
   opacity: 0.7;
   font-size: 1.7rem;
 }
+.section__right--form---input--unvalid {
+  outline: 1px solid red;
+}
+.section__right--form---input--valid {
+  outline: 1px solid green;
+}
 .section__right--form---title {
   color: hsl(213deg, 96%, 18%);
   font-size: 1.7rem;
@@ -247,15 +256,25 @@ input:checked + .slider:before {
   display: flex;
 }
 .section__right--option {
-  height: 17rem;
-  width: 15rem;
+  height: 15rem;
+  width: 14rem;
   border-radius: 1rem;
   border: 1px solid hsl(229deg, 24%, 87%);
   margin: 0 1.5rem 0 0;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
+}
+.section__right--option-discount {
+  font-size: 1.5rem;
+  color: hsl(213deg, 96%, 18%);
+  margin-top: 1rem;
+  font-weight: 500;
+  display: none;
+}
+.section__right--option-discount--show {
+  display: inline-block;
 }
 .section__right--option:hover {
   border: 1px solid hsl(213deg, 96%, 18%);
@@ -265,16 +284,20 @@ input:checked + .slider:before {
 }
 .section__right--option img {
   height: 5rem;
+  margin-right: auto;
 }
 .section__right--option-title {
   color: hsl(213deg, 96%, 18%);
-  font-weight: 700;
+  font-weight: 500;
 }
 .section__right--option-price {
   color: hsl(231deg, 11%, 63%);
+  font-size: 1.8rem;
 }
 .section__right--option--content {
-  margin: 5rem 0 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
 }
 .section__right-month-year-option {
   display: flex;
@@ -361,4 +384,31 @@ input:checked + .slider:before {
 .section__right-summary--sec3---price {
   color: hsl(243deg, 100%, 62%);
   font-weight: 500;
+}
+
+.step5 {
+  text-align: center;
+  margin-top: 26%;
+  width: 80%;
+  margin-left: 5rem;
+}
+.step5__img {
+  height: 8rem;
+}
+.step5__title {
+  color: hsl(213deg, 96%, 18%);
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+.step5__desc {
+  font-size: 2rem;
+  color: hsl(231deg, 11%, 63%);
+}
+
+.unvalid {
+  outline: 1px solid red !important;
+}
+
+.valid {
+  outline: 1px solid green !important;
 }/*# sourceMappingURL=main.css.map */

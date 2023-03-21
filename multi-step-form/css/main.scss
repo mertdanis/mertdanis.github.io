@@ -202,6 +202,10 @@ input:checked + .slider:before {
   font-size: 2rem;
   transform: translateX(8rem);
 
+  &--step5 {
+    transform: none;
+  }
+
   &--activated {
     color: $color-marine-blue;
   }
@@ -273,6 +277,14 @@ input:checked + .slider:before {
       font-weight: 500;
       opacity: 0.7;
       font-size: 1.7rem;
+
+      &--unvalid {
+        outline: 1px solid red;
+      }
+
+      &--valid {
+        outline: 1px solid green;
+      }
     }
 
     &---title {
@@ -287,15 +299,28 @@ input:checked + .slider:before {
   }
 
   &--option {
-    height: 17rem;
-    width: 15rem;
+    height: 15rem;
+    width: 14rem;
     border-radius: 1rem;
     border: 1px solid $color-light-gray;
     margin: 0 1.5rem 0 0;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+
+    padding: 2rem;
     cursor: pointer;
+
+    &-discount {
+      font-size: 1.5rem;
+      color: $color-marine-blue;
+      margin-top: 1rem;
+      font-weight: 500;
+      display: none;
+
+      &--show {
+        display: inline-block;
+      }
+    }
 
     &:hover {
       border: 1px solid $color-marine-blue;
@@ -307,19 +332,24 @@ input:checked + .slider:before {
 
     & img {
       height: 5rem;
+      margin-right: auto;
     }
 
     &-title {
       color: $color-marine-blue;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     &-price {
       color: $color-cool-gray;
+      font-size: 1.8rem;
     }
 
     &--content {
-      margin: 5rem 0 3rem 3rem;
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 6rem;
     }
   }
 
@@ -421,4 +451,34 @@ input:checked + .slider:before {
       }
     }
   }
+}
+
+.step5 {
+  text-align: center;
+  margin-top: 26%;
+  width: 80%;
+  margin-left: 5rem;
+
+  &__img {
+    height: 8rem;
+  }
+
+  &__title {
+    color: $color-marine-blue;
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  &__desc {
+    font-size: 2rem;
+    color: $color-cool-gray;
+  }
+}
+
+.unvalid {
+  outline: 1px solid red !important;
+}
+
+.valid {
+  outline: 1px solid green !important;
 }
