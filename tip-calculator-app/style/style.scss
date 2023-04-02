@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primary-color: hsl(172, 67%, 45%);
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Space Mono", monospace;
+}
+
+.website-logo {
+  cursor: pointer;
+  width: 5%;
+}
+
+.container {
+  display: flex;
+  font-size: 2.4rem;
+  width: 50vw;
+  height: 50vh;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 10vh;
+  background-color: white;
+  border-radius: 3rem;
+
+  &-left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    margin: 3rem 0 3rem 3rem;
+
+    &-bill-container {
+      margin-bottom: 2rem;
+    }
+
+    &-nop-container {
+      margin-top: 3rem;
+    }
+
+    &-title {
+      color: hsl(186, 14%, 43%);
+      font-size: 1.7rem;
+      font-weight: normal;
+      margin-bottom: 1.2rem;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    &-input {
+      background-color: hsl(189, 41%, 97%);
+      border: none;
+      padding: 0.5rem;
+      background-repeat: no-repeat;
+      text-align: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2.4rem;
+      width: 95%;
+      font-weight: bold;
+      font-family: inherit;
+      color: hsl(183, 100%, 15%);
+      border-radius: 7px;
+
+      &::placeholder {
+        margin-left: 1rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        outline: 2px solid $primary-color;
+      }
+    }
+  }
+
+  .tip-option {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1.5rem;
+
+    &-container {
+      margin: 2rem 0;
+    }
+
+    &-component {
+      background-color: hsl(183, 100%, 15%);
+      padding: 1rem;
+      border-radius: 0.7rem;
+      color: white;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 300ms;
+      &:hover {
+        background-color: hsl(183, 61%, 47%);
+        color: hsl(183, 100%, 15%);
+      }
+
+      &-custom {
+        background-color: hsl(189, 41%, 97%);
+        color: hsl(183, 100%, 15%);
+        border: none;
+        font-weight: bold;
+        font-family: inherit;
+        font-size: 2.4rem;
+
+        &::placeholder {
+          font-size: 1.7rem;
+          font-weight: bold;
+          color: hsl(186, 14%, 43%);
+        }
+
+        &:active,
+        &:focus {
+          outline: 2px solid $primary-color;
+          color: hsl(183, 100%, 15%);
+          background-color: hsl(189, 41%, 97%) !important;
+        }
+      }
+    }
+  }
+
+  &-right {
+    background-color: hsl(183, 100%, 15%);
+    padding: 3rem;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    border-radius: 3rem;
+    .tip-amount,
+    .total-amount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-number {
+        color: hsl(172, 67%, 45%);
+        font-size: 5rem;
+      }
+      &-p {
+        color: white;
+        font-size: 2rem;
+      }
+    }
+
+    &-button {
+      border: none;
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background-color: hsl(185, 53%, 28%);
+      border-radius: 7px;
+      color: rgba(0, 0, 0, 0.411);
+      font-family: inherit;
+      transition: 500ms;
+      &:hover {
+        background-color: hsl(171, 59%, 72%);
+        color: hsl(183, 100%, 15%);
+      }
+    }
+  }
+}
+
+.bill-input {
+  background-image: url(/imgs/icon-dollar.svg);
+  background-position: 15px;
+}
+
+.nop-input {
+  background-image: url(/imgs/icon-person.svg);
+  background-position: 15px;
+}
+
+.valid {
+  background-color: hsl(172, 67%, 45%) !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    height: max-content;
+    width: 100vw;
+    margin: 5vh 2rem 0 2rem;
+  }
+
+  .website-logo {
+    width: 25%;
+    margin-top: 5rem;
+  }
+
+  body {
+    height: auto;
+  }
+
+  .container .tip-option {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .container-left {
+    margin: 3rem;
+  }
+
+  .container-right {
+    margin: 1rem 3rem 3rem 3rem;
+  }
+}

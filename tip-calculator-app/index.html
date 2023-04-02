@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splitter | Tip Calculator APP</title>
+  </head>
+  <body>
+  
+    <img src="/imgs/logo.svg" alt="logo" class="website-logo">
+
+
+    <div class="container">
+      <div class="container-left">
+        <div class="container-left-bill-container">
+          
+          <p class="input-title container-left-title">Bill</p>
+          <input placeholder="0" type="number" class="container-left-input bill-input"/>
+        </div>
+          <div class="tip-option-container">
+
+          <p class="tip-title container-left-title">Select Tip %</p>
+          <div class="tip-option">
+            <div class="tip-option-component">5%</div>
+            <div class="tip-option-component">10%</div>
+            <div class="tip-option-component">15%</div>
+            <div class="tip-option-component">25%</div>
+            <div class="tip-option-component">50%</div>
+            <input type="number" placeholder="Custom" class="tip-option-component tip-option-component-custom">
+            
+          </input>
+        </div>
+      </div>
+        
+      <div class="container-left-nop-container">
+
+        <p class="nop-title container-left-title">Number of People</p>
+        <input
+        type="number"
+        placeholder="0"
+        class="container-left-input nop-input"
+        />
+      </div>
+    </div>
+      <div class="container-right">
+        <div class="tip-amount">
+          <p class="tip-amount-p">Tip Amount</p>
+          <p class="tip-amount-number">$0.00</p>
+        </div>
+        <div class="total-amount">
+          <p class="total-amount-p">Total</p>
+          <p class="total-amount-number">$0.00</p>
+        </div>
+
+        <button class="container-right-button">RESET</button>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
