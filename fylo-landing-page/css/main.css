@@ -8,7 +8,7 @@
 
 body {
   box-sizing: border-box;
-  background-color: hsl(218deg, 28%, 13%);
+  background-color: hsl(218, 28%, 13%);
   color: white;
 }
 
@@ -35,7 +35,7 @@ html {
   align-items: center;
   height: 5vh;
   padding: 5rem 0 1rem 0;
-  background-color: hsl(217deg, 28%, 15%);
+  background-color: hsl(217, 28%, 15%);
   transition: opacity 300ms;
 }
 .header__logo {
@@ -77,7 +77,7 @@ html {
   align-items: center;
   height: 85vh;
   width: 100%;
-  background-color: hsl(217deg, 28%, 15%);
+  background-color: hsl(217, 28%, 15%);
   position: relative;
   margin-bottom: 10rem;
 }
@@ -100,7 +100,7 @@ html {
   text-align: center;
 }
 .section1__button {
-  background-color: hsl(198deg, 60%, 50%);
+  background-color: hsl(198, 60%, 50%);
   cursor: pointer;
   font-size: 2rem;
   padding: 1rem;
@@ -117,7 +117,7 @@ html {
   text-decoration: none;
 }
 .section1__button:hover {
-  background-color: hsl(176deg, 68%, 40%);
+  background-color: hsl(176, 68%, 40%);
 }
 
 .section2 {
@@ -157,7 +157,6 @@ html {
 }
 @media only screen and (max-width: 1240px) {
   .section3__img {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     width: 70%;
@@ -182,17 +181,16 @@ html {
 .section3__href {
   font-size: 2rem;
   margin-top: 3rem;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  border-bottom: 1px solid hsl(176deg, 68%, 64%);
+  border-bottom: 1px solid hsl(176, 68%, 64%);
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.6;
 }
 .section3__href--link {
-  color: hsl(176deg, 68%, 64%);
+  color: hsl(176, 68%, 64%);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -220,7 +218,7 @@ html {
   z-index: 1;
 }
 .section4__content {
-  background-color: hsl(219deg, 30%, 18%);
+  background-color: hsl(219, 30%, 18%);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   padding: 3rem;
@@ -238,7 +236,7 @@ html {
 }
 .section4__content--ceo {
   font-weight: 700;
-  color: hsl(0deg, 2%, 82%);
+  color: hsl(0, 2%, 82%);
 }
 .section4__content--container {
   display: flex;
@@ -262,7 +260,7 @@ html {
 }
 
 .section5 {
-  background-color: hsl(217deg, 28%, 15%);
+  background-color: hsl(217, 28%, 15%);
   padding: 5rem;
   width: 50%;
   border-radius: 2rem;
@@ -320,7 +318,7 @@ html {
 }
 .section5__submit {
   border: none;
-  background-color: hsl(198deg, 60%, 50%);
+  background-color: hsl(198, 60%, 50%);
   padding: 2rem;
   font-size: 1.5rem;
   text-transform: capitalize;
@@ -341,7 +339,7 @@ html {
 .section6 {
   margin-top: 10rem;
   font-size: 2rem;
-  background-color: hsl(216deg, 53%, 9%);
+  background-color: hsl(216, 53%, 9%);
 }
 .section6__challange {
   display: flex;

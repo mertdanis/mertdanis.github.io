@@ -179,10 +179,6 @@ select::-ms-expand {
   color: black;
   font-weight: 500;
 }
-#inputArea:-ms-input-placeholder {
-  color: black;
-  font-weight: 500;
-}
 #inputArea::placeholder {
   color: black;
   font-weight: 500;
@@ -284,7 +280,6 @@ select::-ms-expand {
   top: 2.3rem;
   left: 4rem;
   font-size: 1.3rem;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   transition: all 1s;

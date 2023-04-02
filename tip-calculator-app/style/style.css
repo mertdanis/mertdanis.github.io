@@ -165,12 +165,10 @@ html {
 }
 
 .bill-input {
-  background-image: url(/imgs/icon-dollar.svg);
   background-position: 15px;
 }
 
 .nop-input {
-  background-image: url(/imgs/icon-person.svg);
   background-position: 15px;
 }
 
