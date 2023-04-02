@@ -165,10 +165,12 @@ html {
 }
 
 .bill-input {
+  background-image: url(/tip-calculator-app/imgs/icon-dollar.svg);
   background-position: 15px;
 }
 
 .nop-input {
+  background-image: url(/tip-calculator-app/imgs/icon-person.svg);
   background-position: 15px;
 }
 
