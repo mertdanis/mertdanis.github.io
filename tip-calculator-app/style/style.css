@@ -126,6 +126,7 @@ html {
   background-color: hsl(183, 100%, 15%);
   padding: 3rem;
   flex-basis: 50%;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   margin: 3rem;
@@ -136,6 +137,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 .container-right .tip-amount-number,
 .container-right .total-amount-number {
@@ -188,7 +190,7 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1300px) {
   .container {
     flex-direction: column;
     height: -moz-max-content;

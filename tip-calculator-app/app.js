@@ -35,20 +35,25 @@ let handleTipClick = (event) => {
 };
 
 let calcTip = () => {
+  if (
+    customTipOption.classList.contains(`valid`) &&
+    customTipOption.value != 0
+  ) {
+    tipRate = customTipOption.value;
+  }
   let tip = ((billInput.value / 100) * tipRate) / nopInput.value;
   let tipFix = tip.toFixed(2);
-  let totalAmount = tipFix * nopInput.value;
-  let totalAmountFix = totalAmount.toFixed(2);
 
+  let totalAmount =
+    (Number(tip * nopInput.value) + Number(billInput.value)) / nopInput.value;
+  let totalAmountFix = totalAmount.toFixed(2);
   if (tipFix > 0 && totalAmountFix > 0) {
     tipamountText.textContent = `$${tipFix}`;
     totalamountText.textContent = `$${totalAmountFix}`;
     resetButton.classList.add(`valid`);
   }
 
-  if (customTipOption.classList.contains(`valid`)) {
-    tipRate = customTipOption.value;
-  }
+  console.log(tipRate);
 };
 
 billInput.addEventListener(`input`, calcTip);
