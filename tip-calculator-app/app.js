@@ -52,8 +52,6 @@ let calcTip = () => {
     totalamountText.textContent = `$${totalAmountFix}`;
     resetButton.classList.add(`valid`);
   }
-
-  console.log(tipRate);
 };
 
 billInput.addEventListener(`input`, calcTip);
