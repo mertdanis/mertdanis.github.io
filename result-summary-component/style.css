@@ -5,8 +5,11 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -14,8 +17,6 @@ body {
   display: flex;
   border-radius: 3rem;
   box-shadow: 5px 5px 30px -10px rgba(0, 0, 0, 0.6);
-  margin-top: 20vh;
-  margin-left: 50vh;
   color: white;
   width: max-content;
 }
@@ -219,38 +220,11 @@ body {
   font-weight: 700;
 }
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  margin-top: 20rem;
-}
-
-.footer a {
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: red !important;
-  transition: color 500ms;
-}
-
-.footer a:visited {
-  color: black;
-}
-
 @media only screen and (max-width: 650px) {
   .container {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
-    margin-left: 0;
+    margin: 1.5rem;
     width: auto;
-  }
-
-  .footer {
-    font-size: 1.7rem;
-    margin: 3rem 0;
   }
 }
