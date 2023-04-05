@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary-1: hsl(193, 38%, 86%);
+$primary-2: hsl(150, 100%, 66%);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 2.8rem;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(218, 23%, 16%);
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+.content {
+  width: 60rem;
+  height: fit-content;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 5rem;
+  &-title {
+    text-transform: uppercase;
+    color: $primary-2;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.5rem;
+  }
+
+  &-advice {
+    font-size: 3rem;
+    text-align: center;
+    color: $primary-1;
+  }
+
+  &-divider {
+    margin: 3rem 0;
+  }
+
+  &-dice {
+    position: absolute;
+    bottom: -3rem;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $primary-2;
+    padding: 3rem;
+    &:hover {
+      cursor: pointer;
+      background-color: $primary-1;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    & p {
+      font-size: 3rem !important;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+    }
+  }
+
+  .content {
+    width: 90vw;
+
+    height: max-content;
+
+    &-divider {
+      content: url(/advice-generator-app/imgs/pattern-divider-mobile.svg);
+      margin-bottom: 3rem;
+    }
+  }
+}
