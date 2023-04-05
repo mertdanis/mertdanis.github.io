@@ -1,0 +1,118 @@
+* {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  height: -moz-max-content;
+  height: max-content;
+  width: 60rem;
+  background-color: white;
+  display: flex;
+  border-radius: 10px;
+}
+.component-left {
+  flex-basis: 50%;
+}
+.component-left-img {
+  border-radius: 10px;
+  width: 100%;
+}
+.component-right {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.component-right-content {
+  padding: 2rem;
+  margin: 1rem;
+}
+.component-right-light-title {
+  font-size: 1.3rem;
+  letter-spacing: 0.5rem;
+  color: hsl(228, 12%, 48%);
+}
+.component-right-title {
+  font-size: 4rem;
+  font-family: "Fraunces", serif;
+  line-height: 0.9;
+  margin: 2rem 0;
+  font-weight: bolder;
+}
+.component-right-p {
+  line-height: 1.6em;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: hsl(228, 12%, 48%);
+}
+.component-right-price {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.component-right-price-150 {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 3rem;
+}
+.component-right-price-discount {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+.component-right-addbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 1.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border-radius: 8px;
+  transition: 500ms;
+}
+.component-right-addbtn p {
+  margin-left: 0.8rem;
+  font-weight: bold;
+}
+.component-right-addbtn:hover {
+  background-color: hsl(154, 30%, 16%);
+}
+
+@media only screen and (max-width: 600px) {
+  .component {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .component-left-img {
+    content: url(/imgs/image-product-mobile.jpg);
+  }
+  .component-right {
+    flex-basis: 50%;
+  }
+  .component-right-title {
+    font-size: 3.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

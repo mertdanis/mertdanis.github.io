@@ -1,0 +1,138 @@
+* {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color-1: hsl(158, 36%, 37%);
+$color-2: hsl(30, 38%, 92%);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-2;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  height: max-content;
+  width: 60rem;
+
+  background-color: white;
+  display: flex;
+  border-radius: 10px;
+
+  &-left {
+    flex-basis: 50%;
+    &-img {
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  &-right {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+
+    &-content {
+      padding: 2rem;
+      margin: 1rem;
+    }
+
+    &-light-title {
+      font-size: 1.3rem;
+      letter-spacing: 0.5rem;
+
+      color: hsl(228, 12%, 48%);
+    }
+
+    &-title {
+      font-size: 4rem;
+      font-family: "Fraunces", serif;
+      line-height: 0.9;
+      margin: 2rem 0;
+      font-weight: bolder;
+    }
+
+    &-p {
+      line-height: 1.6em;
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+      color: hsl(228, 12%, 48%);
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+
+      &-150 {
+        color: $color-1;
+        font-family: "Fraunces", serif;
+        font-size: 4rem;
+        font-weight: bold;
+        margin-right: 3rem;
+      }
+
+      &-discount {
+        text-decoration: line-through;
+        color: hsl(228, 12%, 48%);
+      }
+    }
+
+    &-addbtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: none;
+      padding: 1.5rem;
+      width: 100%;
+      font-size: 1.5rem;
+
+      cursor: pointer;
+      background-color: $color-1;
+      color: white;
+      border-radius: 8px;
+      transition: 500ms;
+
+      & p {
+        margin-left: 0.8rem;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: hsl(154, 30%, 16%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .component {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    height: max-content;
+    &-left {
+      &-img {
+        content: url(/product-preview-component/imgs/image-product-mobile.jpg);
+      }
+    }
+
+    &-right {
+      flex-basis: 50%;
+
+      &-title {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
