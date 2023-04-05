@@ -83,7 +83,7 @@ button {
     height: max-content;
   }
   .content-divider {
-    content: url(/imgs/pattern-divider-mobile.svg);
+    content: url(/advice-generator-app/imgs/pattern-divider-mobile.svg);
     margin-bottom: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

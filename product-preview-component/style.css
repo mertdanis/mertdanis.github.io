@@ -19,8 +19,7 @@ body {
 }
 
 .component {
-  height: -moz-max-content;
-  height: max-content;
+  height: 45rem;
   width: 60rem;
   background-color: white;
   display: flex;
@@ -107,7 +106,7 @@ body {
     height: max-content;
   }
   .component-left-img {
-    content: url(/imgs/image-product-mobile.jpg);
+    content: url(/product-preview-component/imgs/image-product-mobile.jpg) !important;
   }
   .component-right {
     flex-basis: 50%;
