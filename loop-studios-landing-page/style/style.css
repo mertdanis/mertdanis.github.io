@@ -55,7 +55,6 @@ body ul {
 
 .section01 {
   height: 65vh;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/imgs/desktop/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -102,14 +101,6 @@ body ul {
   height: 70%;
 }
 
-.section02 {
-  height: 55vh;
-  margin: 15vh 10vw;
-  margin-right: 0 !important;
-  padding: 0 !important;
-  display: flex;
-  position: relative;
-}
 .section02-left-img {
   height: 100%;
 }
@@ -254,7 +245,7 @@ body ul {
 
 @media only screen and (max-width: 1300px) {
   .section01 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/imgs/mobile/image-hero.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/loop-studios-landing-page/imgs/mobile/image-hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -296,7 +287,7 @@ body ul {
   }
   .section02-left-img {
     margin: 0 5vw;
-    content: url(/imgs/mobile/image-interactive.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-interactive.jpg);
     margin-bottom: 3rem;
     width: 90%;
   }
@@ -343,28 +334,28 @@ body ul {
     width: 80vw;
   }
   .section04-categories-item-1 img {
-    content: url(/imgs/mobile/image-deep-earth.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-deep-earth.jpg);
   }
   .section04-categories-item-2 img {
-    content: url(/imgs/mobile/image-night-arcade.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-night-arcade.jpg);
   }
   .section04-categories-item-3 img {
-    content: url(/imgs/mobile/image-soccer-team.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-soccer-team.jpg);
   }
   .section04-categories-item-4 img {
-    content: url(/imgs/mobile/image-grid.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-grid.jpg);
   }
   .section04-categories-item-5 img {
-    content: url(/imgs/mobile/image-from-above.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-from-above.jpg);
   }
   .section04-categories-item-6 img {
-    content: url(/imgs/mobile/image-pocket-borealis.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-pocket-borealis.jpg);
   }
   .section04-categories-item-7 img {
-    content: url(/imgs/mobile/image-curiosity.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-curiosity.jpg);
   }
   .section04-categories-item-8 img {
-    content: url(/imgs/mobile/image-fisheye.jpg);
+    content: url(/loop-studios-landing-page/imgs/mobile/image-fisheye.jpg);
   }
   .section04-categories-1 {
     flex-direction: column;
