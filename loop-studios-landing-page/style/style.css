@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  font-size: 1.5rem;
+}
+body a {
+  text-decoration: none;
+  color: white;
+}
+body ul {
+  list-style-type: none;
+}
+
+.hamburger-menu {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  animation: openAnim 1s;
+  padding: 1rem;
+  height: 100vh;
+  display: none;
+}
+.hamburger-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 1rem;
+}
+.hamburger-menu-top .closeBtn {
+  cursor: pointer;
+  height: 2rem;
+  margin-right: 2rem;
+}
+.hamburger-menu-bottom {
+  margin-top: 20rem;
+}
+.hamburger-menu-bottom a {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.hamburger-menu-bottom li {
+  margin: 1rem 0;
+}
+
+.section01 {
+  height: 65vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/loop-studios-landing-page/imgs/desktop/image-hero.jpg);
+}
+.section01-logo {
+  height: 4rem;
+}
+.section01-logo:hover {
+  cursor: pointer;
+}
+.section01-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
+}
+.section01-header-hamburger-container {
+  display: none;
+}
+.section01-header ul {
+  display: flex;
+  margin-right: 10vw;
+}
+.section01-header li {
+  margin: 2rem;
+  font-size: 1.7rem;
+  transition: 300ms;
+}
+.section01-header li:hover {
+  transform: scale(1.2);
+}
+.section01-text {
+  text-transform: uppercase;
+  border: 2px solid white;
+  color: white;
+  font-size: 7rem;
+  padding: 3rem;
+  width: 35%;
+  font-weight: 300;
+  margin: 15vh 10vw;
+  line-height: normal;
+}
+.section01-logo {
+  margin-left: 10vw;
+  height: 70%;
+}
+
+.section02 {
+  height: 55vh;
+  margin: 15vh 10vw;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  position: relative;
+}
+.section02-left-img {
+  height: 100%;
+}
+.section02-right {
+  position: absolute;
+  top: 20rem;
+  left: 38%;
+  right: 3rem;
+  line-height: 1.6em;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  padding: 10rem;
+  width: 45%;
+  font-size: 1.7rem;
+}
+.section02-right-title {
+  color: black;
+  text-transform: uppercase;
+  line-height: normal;
+  margin-bottom: 3rem;
+  font-size: 5rem;
+}
+
+.section03 {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 10vw;
+}
+.section03-title {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.section03-btn {
+  border: none;
+  background: none;
+  padding: 1rem;
+  height: 5rem;
+  border: 2px solid black;
+  letter-spacing: 1rem;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.section03-btn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.section04 {
+  margin: 0 20vw;
+  display: flex;
+  flex-direction: column;
+}
+.section04-btn {
+  display: none;
+}
+.section04-categories-item {
+  position: relative;
+  transition: 200ms;
+}
+.section04-categories-item:hover {
+  transform: scale(1.1);
+}
+.section04-categories-item img {
+  transition: 200ms;
+  filter: brightness(0.6);
+}
+.section04-categories-item img:hover {
+  filter: brightness(1);
+  cursor: pointer;
+}
+.section04-categories-item p {
+  color: white;
+  bottom: 5rem;
+  left: 2rem;
+  font-size: 3rem;
+  white-space: pre;
+  text-transform: uppercase;
+  font-weight: normal;
+  position: absolute;
+}
+.section04-categories-1 {
+  display: flex;
+}
+.section04-categories-1 div {
+  margin: 0 3rem 0 0;
+}
+.section04-categories-2 {
+  display: flex;
+  margin: 3rem 0;
+}
+.section04-categories-2 div {
+  margin: 0 3rem 0 0;
+}
+
+.section05 {
+  background-color: black;
+  display: flex;
+  margin-top: 15vh;
+  flex-direction: column;
+}
+.section05-top, .section05-bottom {
+  margin: 0 10vw;
+}
+.section05-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 10vw 2rem 10vw;
+}
+.section05-top-logo {
+  height: 3rem;
+}
+.section05-top-logo:hover {
+  cursor: pointer;
+}
+.section05-top-social img {
+  margin: 0.5rem;
+}
+.section05-bottom {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+.section05-bottom-arr {
+  color: hsl(0, 0%, 41%);
+  font-weight: bold;
+}
+.section05-bottom-list {
+  display: flex;
+  margin-bottom: 5rem;
+}
+.section05-bottom-list-item {
+  font-size: 1.7rem;
+  margin-right: 3rem;
+  transition: 300ms;
+}
+.section05-bottom-list-item:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1300px) {
+  .section01 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/loop-studios-landing-page/imgs/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .section01-text {
+    font-size: 4rem;
+    width: auto;
+    margin-top: 50vh;
+  }
+  .section01-header ul {
+    display: none;
+  }
+  .section01-header {
+    align-items: center;
+  }
+  .section01-header-hamburger {
+    visibility: visible;
+    opacity: 1;
+    margin-right: 3rem;
+    height: 2rem;
+    position: relative;
+  }
+  .section01-header-hamburger:hover {
+    cursor: pointer;
+  }
+  .section01-header-hamburger-container {
+    display: block;
+  }
+  .hamburger-menu-list {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .section02 {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10vh 5vw;
+  }
+  .section02-left-img {
+    margin: 0 5vw;
+    content: url(/loop-studios-landing-page/imgs/mobile/image-interactive.jpg);
+    margin-bottom: 3rem;
+    width: 90%;
+  }
+  .section02-right {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+  .section02-right-title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .section02-right-txt {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .section03 {
+    justify-content: center;
+    margin: 5rem 10vw;
+  }
+  .section03-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .section03-btn {
+    display: none;
+  }
+  .section04 {
+    margin: 0 10vw;
+  }
+  .section04-btn {
+    display: block;
+    margin: 3rem 0;
+  }
+  .section04-categories-item p {
+    bottom: 1rem;
+    left: 1rem;
+    font-weight: 300;
+  }
+  .section04-categories-item img {
+    width: 80vw;
+  }
+  .section04-categories-item-1 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-deep-earth.jpg);
+  }
+  .section04-categories-item-2 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-night-arcade.jpg);
+  }
+  .section04-categories-item-3 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-soccer-team.jpg);
+  }
+  .section04-categories-item-4 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-grid.jpg);
+  }
+  .section04-categories-item-5 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-from-above.jpg);
+  }
+  .section04-categories-item-6 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-pocket-borealis.jpg);
+  }
+  .section04-categories-item-7 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-curiosity.jpg);
+  }
+  .section04-categories-item-8 img {
+    content: url(/loop-studios-landing-page/imgs/mobile/image-fisheye.jpg);
+  }
+  .section04-categories-1 {
+    flex-direction: column;
+  }
+  .section04-categories-1 div {
+    margin: 0 0 2rem 0;
+  }
+  .section04-categories-2 {
+    flex-direction: column;
+    margin: 0;
+  }
+  .section04-categories-2 div {
+    margin: 0 0 2rem 0;
+  }
+  .section05 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+  }
+  .section05-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section05-top-logo {
+    width: 20rem;
+    margin-bottom: 2rem;
+  }
+  .section05-bottom {
+    flex-direction: column;
+  }
+  .section05-bottom-arr {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+@media only screen and (max-width: 1300px) and (max-width: 400px) {
+  .section05-bottom-arr {
+    font-size: 1.4rem !important;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .section05-bottom-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section05-bottom-list-item {
+    margin: 1rem 0;
+  }
+}
+@keyframes openAnim {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}/*# sourceMappingURL=style.css.map */
