@@ -67,16 +67,15 @@ body {
 
 .section01 {
   height: 65vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(36, 35, 35, 0.5)
     ),
-    url(mertdanis.github.io/blob/main/loop-studios-landing-page/imgs/desktop/image-hero.JPG);
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    url(/loop-studios-landing-page/imgs/desktop/image-hero.JPG);
 
   &-logo {
     height: 4rem;
