@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: hsl(240, 78%, 98%);
+  background-image: url(/imgs/bg-top.svg), url(/imgs/bg-bottom.svg);
+  background-position: top right, left bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.container .site-title {
+  margin-bottom: 5rem;
+  font-size: 3.5rem;
+  color: hsl(233, 13%, 49%);
+  text-align: center;
+}
+.container .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+.container .option p {
+  margin: 1rem;
+  color: hsl(234, 14%, 74%);
+}
+.container-card {
+  display: flex;
+  background-color: white;
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 1rem;
+}
+.container-card-component {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+  padding: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.container-card-component_selected {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  scale: 1.1;
+  border-radius: inherit;
+}
+.container-card-component_selected p {
+  color: white !important;
+}
+.container-card-component_selected > .container-card-component-features p {
+  border-bottom: 1px solid hsl(240, 78%, 98%) !important;
+  padding: 1.8rem 0;
+}
+.container-card-component_selected > .container-card-component-features p:first-child {
+  border-top: 1px solid hsl(240, 78%, 98%) !important;
+  padding: 1.5rem 0;
+}
+.container-card-component_selected > .container-card-component-features p:last-child {
+  margin-bottom: 3rem;
+}
+.container-card-component_selected button {
+  transition: 300ms border;
+  margin: -1px;
+  background: white !important;
+  color: hsl(237, 63%, 64%) !important;
+}
+.container-card-component_selected button:hover {
+  color: white !important;
+  border: 1px solid white !important;
+}
+.container-card-component .title {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: hsl(233, 13%, 49%);
+}
+.container-card-component .price {
+  margin-bottom: 5rem;
+  font-size: 7rem;
+  color: hsl(232, 13%, 33%);
+}
+.container-card-component-features {
+  color: hsl(233, 13%, 49%);
+  font-size: 1.5rem;
+}
+.container-card-component-features p {
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  padding: 2rem 0;
+}
+.container-card-component-features p:first-child {
+  border-top: 1px solid hsl(234, 14%, 74%);
+  padding: 2rem 0;
+}
+.container-card-component-features p:last-child {
+  margin-bottom: 3rem;
+}
+.container-card-component .button {
+  border: none;
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right top, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.3rem;
+  transition: 300ms border;
+}
+.container-card-component .button:hover {
+  cursor: pointer;
+  color: hsl(237, 63%, 64%);
+  background: inherit !important;
+  border: 1px solid hsl(232, 13%, 33%);
+  margin: -1px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right top, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-blue {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right top, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transition: 0.4s;
+}
+
+.slider-blue:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider-blue {
+  background-color: hsl(237, 63%, 64%);
+}
+
+input:focus + .slider-blue {
+  box-shadow: 0 0 1px #fc7307;
+}
+
+input:checked + .slider-blue:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider-blue.round {
+  border-radius: 34px;
+}
+
+.slider-blue.round:before {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    flex-direction: column;
+    background-image: url(/imgs/bg-top.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  .container {
+    margin-top: 5rem;
+  }
+  .option {
+    margin-bottom: 5vh !important;
+  }
+  .container-card {
+    flex-direction: column;
+    width: -moz-max-content;
+    width: max-content;
+    height: auto;
+    background-color: transparent;
+  }
+  .container-card-component {
+    width: auto;
+    margin: 1.5rem 0;
+    background-color: white;
+    border-radius: 1rem;
+  }
+  .container-card-component:last-child {
+    margin-bottom: 5rem;
+  }
+  .container-card-component_selected {
+    scale: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
