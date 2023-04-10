@@ -3,9 +3,9 @@ let closeBtn = document.querySelector(`.closeBtn`);
 let hamburgerMenu = document.querySelector(`.hamburger-menu`);
 
 hamburgerIcon.addEventListener(`click`, () => {
-  hamburgerMenu.style.display = `block`;
+  hamburgerMenu.style.marginLeft = `-0%`;
 });
 
 closeBtn.addEventListener(`click`, () => {
-  hamburgerMenu.style.display = `none`;
+  hamburgerMenu.style.marginLeft = `-100%`;
 });

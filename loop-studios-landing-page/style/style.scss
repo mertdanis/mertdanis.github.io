@@ -33,15 +33,15 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  animation: openAnim 1s;
   padding: 1rem;
   height: 100vh;
-  display: none;
+  margin-left: -100%;
+  transition: margin 500ms;
   &-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3rem 1rem;
+    margin: 4.5rem 2rem;
 
     & .closeBtn {
       cursor: pointer;
@@ -513,15 +513,5 @@ body {
         }
       }
     }
-  }
-}
-
-@keyframes openAnim {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0%);
   }
 }
