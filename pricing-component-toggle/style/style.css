@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   background: hsl(240, 78%, 98%);
-  background-image: url(/imgs/bg-top.svg), url(/imgs/bg-bottom.svg);
+  background-image: url(/pricing-component-toggle/imgs/bg-top.svg), url(/pricing-component-toggle/imgs/bg-bottom.svg);
   background-position: top right, left bottom;
   background-repeat: no-repeat, no-repeat;
 }
@@ -223,7 +223,7 @@ input:checked + .slider-blue:before {
 @media only screen and (max-width: 1000px) {
   body {
     flex-direction: column;
-    background-image: url(/imgs/bg-top.svg);
+    background-image: url(/pricing-component-toggle/imgs/bg-top.svg);
     background-position: top center;
     background-repeat: no-repeat;
   }

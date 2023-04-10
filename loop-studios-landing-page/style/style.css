@@ -55,10 +55,10 @@ body ul {
 
 .section01 {
   height: 65vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/loop-studios-landing-page/imgs/desktop/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(36, 35, 35, 0.5)), url(/loop-studios-landing-page/imgs/desktop/image-hero.jpg);
 }
 .section01-logo {
   height: 4rem;
@@ -84,7 +84,7 @@ body ul {
   transition: 300ms;
 }
 .section01-header li:hover {
-  transform: scale(1.2);
+  transform: scaleY(1.1);
 }
 .section01-text {
   text-transform: uppercase;
@@ -287,6 +287,9 @@ body ul {
   .hamburger-menu-list {
     display: flex !important;
     flex-direction: column;
+  }
+  .hamburger-menu-list-item:hover {
+    text-decoration: underline;
   }
   .section02 {
     display: flex;
