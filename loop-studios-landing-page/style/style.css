@@ -152,6 +152,7 @@ body ul {
   letter-spacing: 1rem;
   font-weight: bold;
   transition: 0.5s;
+  z-index: 9;
 }
 .section03-btn:hover {
   cursor: pointer;
@@ -320,7 +321,7 @@ body ul {
   }
   .section03 {
     justify-content: center;
-    margin: 10rem 5vw 5rem 5vw;
+    margin: 5rem 10vw;
   }
   .section03-title {
     font-size: 3rem;
