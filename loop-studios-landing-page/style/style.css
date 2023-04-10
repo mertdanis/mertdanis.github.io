@@ -336,6 +336,7 @@ body ul {
   .section04-btn {
     display: block;
     margin: 3rem 0;
+    color: black !important;
   }
   .section04-categories-item p {
     bottom: 1rem;
