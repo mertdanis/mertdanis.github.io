@@ -86,10 +86,10 @@ html {
       z-index: 9;
       background-color: white;
       border-radius: 1rem;
-      transform: translateX(-10rem) translateY(1rem);
+      transform: translateX(-15rem) translateY(2.5rem);
       width: max-content;
-
       box-shadow: 1px 1px 1rem $color-black-for-bb;
+      padding: 2rem;
 
       &--empty {
         display: flex;
@@ -102,7 +102,7 @@ html {
 
       &---title {
         font-size: 2rem;
-        margin: 2rem 3rem;
+        margin-bottom: 2rem;
         font-weight: 700;
       }
 
@@ -111,7 +111,8 @@ html {
         justify-content: center;
         align-items: center;
         border-top: 1px solid $color-dark-grayish-blue;
-        padding: 2rem;
+        gap: 1rem;
+        padding: 1rem 0;
       }
 
       &---flex2 {
@@ -132,7 +133,6 @@ html {
       &---img {
         height: 5.5rem;
         border-radius: 1rem;
-        margin: 0 1rem;
       }
 
       &---ordername {
@@ -173,14 +173,14 @@ html {
         cursor: pointer;
         outline: none;
         background-color: $color-primary-orange;
-        width: 90%;
+        width: 80%;
         margin: 1rem 3rem 3rem 3rem;
         color: $color-white;
         font-family: inherit;
         font-size: 2rem;
-
+        transition: background-color 500ms;
         &:hover {
-          background-color: $color-dark-grayish-blue;
+          background-color: black;
         }
       }
 
@@ -243,6 +243,12 @@ html {
     border-radius: 1rem;
     margin-bottom: 3rem;
     cursor: pointer;
+
+    &:hover {
+      scale: 1.2;
+      margin-bottom: 6rem;
+    }
+    transition: 300ms;
   }
 
   &__thumbnail {
@@ -250,6 +256,7 @@ html {
     border-radius: 2rem;
     margin: 1rem;
     cursor: pointer;
+    transition: 500ms scale;
   }
 }
 
@@ -257,6 +264,7 @@ html {
   border-radius: 2rem;
   cursor: pointer;
   outline: 3px solid orange;
+  scale: 1.1;
 }
 
 .section2 {

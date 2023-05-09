@@ -50,12 +50,9 @@ minusBtn.addEventListener(`click`, () => {
 });
 
 addtoCart.addEventListener(`click`, () => {
-  headercardBtn_Container.addEventListener(`mouseenter`, () => {
-    headercarBtn_Abs.classList.add(`header__cart-btn--abs---active`);
-  });
-
-  headercardBtn_Container.addEventListener(`mouseleave`, () => {
-    headercarBtn_Abs.classList.remove(`header__cart-btn--abs---active`);
+  headercardBtn_Container.addEventListener(`click`, () => {
+    headercarBtn_Abs.classList.toggle(`header__cart-btn--abs---active`);
+    delBtn.addEventListener("click", () => {});
   });
 
   if (orderNumber.textContent > 0 && orderNumber.textContent < 10) {
@@ -71,8 +68,9 @@ let priceCalc = function () {
   number_Order.textContent = orderNumber.textContent;
 
   let cartPriceReplace = cartPrice.textContent.replace("$", "");
-  console.log(cartPriceReplace * 2);
-  totalPrice.textContent = `$` + cartPriceReplace * number_Order.textContent;
+  totalPrice.textContent = `$ + ${
+    cartPriceReplace * number_Order.textContent
+  }.00`;
 
   orderName.textContent = section2title.textContent;
 };
@@ -90,10 +88,37 @@ let cartBtn_Func = function () {
   }
 };
 
-setInterval(cartBtn_Func, 1000);
-
 let mainimageHandler = function (mainImg) {
   mainImg.addEventListener(`click`, () => {
+    let nextBtn = document.querySelector(".popup__next");
+    let backBtn = document.querySelector(".popup__prev");
+    let imgArr = [
+      "images/image-product-1.jpg",
+      "images/image-product-2.jpg",
+      "images/image-product-3.jpg",
+      "images/image-product-4.jpg",
+    ];
+
+    let currentImg = 0;
+    let imgSrc = document.querySelector(".popup__main--img");
+    backBtn.addEventListener("click", () => {
+      currentImg--;
+
+      if (currentImg < 1) {
+        currentImg = imgArr.length - 1;
+      }
+      imgSrc.src = imgArr[currentImg];
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentImg++;
+      if (currentImg == imgArr.length) {
+        currentImg = 0;
+      }
+
+      imgSrc.src = imgArr[currentImg];
+    });
+
     popup.classList.add(`popup--active`);
     closeBtn.addEventListener(`click`, () => {
       popup.classList.remove(`popup--active`);
@@ -124,3 +149,4 @@ thumbnailHandler(img1, `images/image-product-1.jpg`);
 thumbnailHandler(img2, `images/image-product-2.jpg`);
 thumbnailHandler(img3, `images/image-product-3.jpg`);
 thumbnailHandler(img4, `images/image-product-4.jpg`);
+setInterval(cartBtn_Func, 1000);
