@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(/imgs/bg-desktop.png), linear-gradient(to right, hsl(229, 57%, 11%), hsl(229, 57%, 11%));
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: bottom, left, right;
+  background-size: contain;
+}
+
+.logo {
+  transition: 300ms;
+}
+.logo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#effect {
+  display: block;
+  position: absolute;
+  top: 3rem;
+  right: 2.5rem;
+  border-left: 2.5rem solid transparent;
+  border-top: 2.5rem solid white;
+}
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  gap: 4rem;
+  margin-bottom: 12rem;
+}
+.container-left, .container-right {
+  background-color: hsl(228, 56%, 26%);
+  padding: 2rem;
+}
+.container-left {
+  width: 35rem;
+  border-radius: 1rem 10rem 1rem 1rem;
+  padding: 4rem;
+}
+.container-left-img img {
+  border-radius: 1rem;
+  background-color: hsl(229, 57%, 11%);
+  min-height: 4.5rem;
+  padding: 1.2rem;
+  margin-top: 3rem;
+}
+.container-left-img img:not(:last-child) {
+  margin-right: 0.7rem;
+}
+.container-left-img img:hover {
+  cursor: pointer;
+}
+.container-right {
+  position: relative;
+  width: 55rem;
+  border-radius: 1rem;
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-right-left {
+  position: absolute;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  top: -3.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+}
+.container-right-p {
+  color: white;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+.container-right-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.container-right-bottom-flex {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-image: url(/imgs/bg-mobile.png);
+    background-size: cover;
+  }
+  .container {
+    flex-direction: column;
+    margin: 0 2rem;
+    gap: 2rem;
+  }
+  .container-right {
+    max-width: 35rem;
+  }
+  .container-right-left {
+    top: 12.5rem;
+    right: 9rem;
+    padding: 2rem;
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none !important;
+  text-decoration: none !important;
+}
+
+body {
+  display: flex;
+  background-color: white;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.card-img-top:hover {
+  opacity: 0.9;
+  transition: opacity 1s;
+}
+
+.card {
+  box-shadow: 0, 2rem, 2rem, rgba(0, 0, 0, 0.6);
+}
+
+.card-body p,
+h4 {
+  color: black;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+.card h4 {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.card h4:hover {
+  font-weight: 800;
+}
+
+.blackcardbg {
+  background-color: black;
+}
+
+.dropdown_Menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.dropdown_Menu.active {
+  display: flex;
+  flex-direction: row;
+  visibility: visible;
+  opacity: 1;
+  padding: 1rem;
+  top: calc(100% + 5px);
+  width: 100%;
+  z-index: 99;
+  transition: transform 150ms ease-in-out;
+  background-color: black;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.dropdown_Menu.active a {
+  color: white;
+  padding: 7px;
+}
+
+.dropdown_Menu.active a:hover {
+  opacity: 0.7;
+}
+
+.dropdowntext {
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdowntext:hover {
+  border-bottom: 3px solid gray;
+}
+
+#dropdownmore {
+  font-weight: 600;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.fa-magnifying-glass:hover {
+  opacity: 0.7;
+  transition: 1s;
+}
+
+.text_area.show {
+  opacity: 1;
+  width: 50%;
+  position: absolute;
+  border: none;
+  border-radius: 7px;
+  background-color: black;
+  padding: 3px;
+  line-height: 30px;
+  font-size: 20px;
+  padding-left: 17px;
+  color: white;
+  transform: translateX(0px);
+  transition: transform 1s linear;
+  pointer-events: auto;
+  z-index: 9;
+}
+
+.fa-magnifying-glass {
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+}
+
+.lpreference a {
+  color: white;
+}
+
+.lpreference {
+  color: white;
+  position: relative;
+  margin: 0px 7px 0px 0px;
+}
+
+.fa-angle-down {
+  margin-left: 5px;
+}
+
+.langhide {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  transition: transform 300ms ease-in-out;
+  transform: translateY(-10px);
+}
+
+.langhide.show {
+  opacity: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  border-radius: 7px;
+  top: calc(100% + 0.25rem);
+  padding: 5px;
+  line-height: 25px;
+  background-color: black;
+  pointer-events: auto;
+  transform: translateY(10px);
+  z-index: 9;
+}
+
+.lpreference a:hover {
+  opacity: 0.7;
+  transition: 0.7s;
+}
+
+.opacitiy_0 {
+  opacity: 0.5;
+}
+
+.opacitiy_1 {
+  opacity: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0 !important;
+  width: 100%;
+  padding: 10px 8% !important;
+  z-index: 9;
+  background-color: black;
+  transition: 500ms ease-in-out;
+}
+
+.blackcardbg {
+  background-color: black;
+}
+
+.blackbg {
+  background-color: black;
+  transition: background-color 1000ms linear;
+}
+
+.whitebg {
+  background-color: white;
+  transition: background-color 1000ms linear;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-list {
+  display: flex;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.menu-list a {
+  color: white;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: relative;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.logo > img {
+  height: 70px;
+  position: relative;
+  left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.logo > img:hover {
+  opacity: 0.7;
+  transition: opacity 0.7s ease;
+}
+
+.logo > p {
+  padding: 5px;
+  font-size: 20px;
+}
+
+#moon {
+  display: block;
+  cursor: pointer;
+}
+
+#moon.hide {
+  cursor: pointer;
+  display: none;
+}
+
+#sun:hover {
+  color: yellow;
+  transition: color 0.7s;
+}
+
+#moon:hover {
+  color: gray;
+  transition: 0.7s;
+}
+
+#sun {
+  display: none;
+  cursor: pointer;
+}
+
+#sun.show {
+  display: block;
+  cursor: pointer;
+}
+
+.light {
+  padding: 7px;
+  margin: 5px;
+}
+
+.iconheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#footercontainer {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.logo-footer {
+  margin: 20px;
+  cursor: pointer;
+  width: 25%;
+}
+
+.logo-footer:hover {
+  opacity: 0.7;
+  transition: 0.7s;
+}
+
+.footer-med {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  padding: 8px;
+}
+
+.footer-med a {
+  color: white;
+}
+
+.footer-med a:hover {
+  color: red;
+}
+
+.fab {
+  cursor: pointer;
+}
+
+.fa-facebook:hover {
+  color: rgb(59, 89, 152);
+  transition: 0.7s;
+}
+
+.fa-instagram:hover {
+  color: rgb(64, 93, 230);
+  transition: 0.7s;
+}
+
+.fa-twitter:hover {
+  color: rgb(29, 161, 242);
+  transition: 0.7s;
+}
+
+.fa-youtube:hover {
+  color: rgb(255, 0, 0);
+  transition: 0.7s;
+}
+
+.footer-copy p {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.footer-copy {
+  height: 3rem;
+}
+
+#fspan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 25px;
+  font-weight: 600;
+}
+
+.iconsoc {
+  padding: 3px;
+  margin-right: 5px;
+  margin-top: 5px;
+}/*# sourceMappingURL=main.css.map */
