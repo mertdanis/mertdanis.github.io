@@ -23,6 +23,10 @@ body {
   background-size: contain;
 }
 
+.red {
+  color: red;
+}
+
 .logo {
   transition: 300ms;
 }
