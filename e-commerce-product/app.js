@@ -49,24 +49,32 @@ minusBtn.addEventListener(`click`, () => {
   }
 });
 
-addtoCart.addEventListener(`click`, () => {
-  headercardBtn_Container.addEventListener(`click`, () => {
-    headercarBtn_Abs.classList.toggle(`header__cart-btn--abs---active`);
-    delBtn.addEventListener("click", () => {});
-  });
+headercardBtn_Container.addEventListener(`click`, () => {
+  cartBtn_Func();
+  headercarBtn_Abs.classList.toggle(`header__cart-btn--abs---active`);
+});
 
-  if (orderNumber.textContent > 0 && orderNumber.textContent < 10) {
+addtoCart.addEventListener(`click`, () => {
+  cartBtn_Func();
+  priceCalc();
+  if (orderNumber.textContent > 0) {
     headercardNumber.classList.add(`header__cart-btn--number---show`);
     headercardNumber.textContent = orderNumber.textContent;
   } else if (orderNumber.textContent == 0) {
     headercardNumber.textContent = orderNumber.textContent;
   }
+  delBtn.addEventListener("click", () => {
+    orderNumber.textContent = 0;
+    headercardNumber.textContent = 0;
+    headerabsEmpty.textContent = `Your cart is empty.`;
+    abs_sec_1.style.opacity = 0;
+    abs_sec_2.style.opacity = 0;
+  });
 });
 
 let priceCalc = function () {
   cartPrice.textContent = price.textContent;
   number_Order.textContent = orderNumber.textContent;
-
   let cartPriceReplace = cartPrice.textContent.replace("$", "");
   totalPrice.textContent = `$ + ${
     cartPriceReplace * number_Order.textContent
@@ -76,7 +84,7 @@ let priceCalc = function () {
 };
 
 let cartBtn_Func = function () {
-  if (orderNumber.textContent < 1) {
+  if (orderNumber.textContent == 0) {
     headerabsEmpty.textContent = `Your cart is empty.`;
     abs_sec_1.style.opacity = 0;
     abs_sec_2.style.opacity = 0;
@@ -84,49 +92,8 @@ let cartBtn_Func = function () {
     headerabsEmpty.textContent = ``;
     abs_sec_1.style.opacity = 1;
     abs_sec_2.style.opacity = 1;
-    setInterval(priceCalc, 1000);
   }
 };
-
-let mainimageHandler = function (mainImg) {
-  mainImg.addEventListener(`click`, () => {
-    let nextBtn = document.querySelector(".popup__next");
-    let backBtn = document.querySelector(".popup__prev");
-    let imgArr = [
-      "images/image-product-1.jpg",
-      "images/image-product-2.jpg",
-      "images/image-product-3.jpg",
-      "images/image-product-4.jpg",
-    ];
-
-    let currentImg = 0;
-    let imgSrc = document.querySelector(".popup__main--img");
-    backBtn.addEventListener("click", () => {
-      currentImg--;
-
-      if (currentImg < 1) {
-        currentImg = imgArr.length - 1;
-      }
-      imgSrc.src = imgArr[currentImg];
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentImg++;
-      if (currentImg == imgArr.length) {
-        currentImg = 0;
-      }
-
-      imgSrc.src = imgArr[currentImg];
-    });
-
-    popup.classList.add(`popup--active`);
-    closeBtn.addEventListener(`click`, () => {
-      popup.classList.remove(`popup--active`);
-    });
-  });
-};
-
-mainimageHandler(mainImage);
 
 let thumbnailHandler = function (img, fileName) {
   img.addEventListener(`mouseenter`, () => {
@@ -145,8 +112,56 @@ let thumbnailHandler = function (img, fileName) {
   });
 };
 
+let mainimageHandler = function (mainImg) {
+  let imgArr = [
+    "images/image-product-1.jpg",
+    "images/image-product-2.jpg",
+    "images/image-product-3.jpg",
+    "images/image-product-4.jpg",
+  ];
+  let imgSrc = document.querySelector(".popup__main--img");
+
+  mainImg.addEventListener(`click`, () => {
+    let currentImg = 0;
+
+    let nextBtn = document.querySelector(".popup__next");
+    let backBtn = document.querySelector(".popup__prev");
+    backBtn.addEventListener("click", () => {
+      currentImg--;
+      if (currentImg < 0) {
+        currentImg = imgArr.length - 1;
+      }
+      imgSrc.src = imgArr[currentImg];
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentImg++;
+      if (currentImg == imgArr.length) {
+        currentImg = 0;
+      }
+
+      imgSrc.src = imgArr[currentImg];
+    });
+
+    let thumbnailImgs = document.querySelectorAll(`.popup__images--img`);
+    thumbnailImgs.forEach((thumbnail, i) => {
+      thumbnail.addEventListener(`click`, () => {
+        imgSrc.src = imgArr[i];
+        currentImg = i;
+      });
+      imgSrc.src = mainImg.src;
+    });
+
+    popup.classList.add(`popup--active`);
+    closeBtn.addEventListener(`click`, () => {
+      popup.classList.remove(`popup--active`);
+    });
+  });
+};
+
+mainimageHandler(mainImage);
+
 thumbnailHandler(img1, `images/image-product-1.jpg`);
 thumbnailHandler(img2, `images/image-product-2.jpg`);
 thumbnailHandler(img3, `images/image-product-3.jpg`);
 thumbnailHandler(img4, `images/image-product-4.jpg`);
-setInterval(cartBtn_Func, 1000);
