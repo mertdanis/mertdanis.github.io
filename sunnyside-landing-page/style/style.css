@@ -27,7 +27,7 @@ h6 {
 
 .header {
   min-height: 100vh;
-  background-image: url(mertdanis.github.io/blob/main/sunnyside-landing-page/imgs/desktop/image-header.jpg);
+  background-image: url(/sunnyside-landing-page/imgs/desktop/image-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 5rem;
@@ -108,7 +108,7 @@ h6 {
   grid-template-columns: repeat(2, 1fr);
 }
 .section2-right {
-  background-image: url(mertdanis.github.io/blob/main/sunnyside-landing-page/imgs/desktop/image-transform.jpg);
+  background-image: url(/sunnyside-landing-page/imgs/desktop/image-transform.jpg);
   background-size: cover;
 }
 .section2-left {
@@ -151,7 +151,7 @@ h6 {
   border-color: yellow;
 }
 .section3-left {
-  background-image: url(mertdanis.github.io/blob/main/sunnyside-landing-page/imgs/desktop/image-stand-out.jpg);
+  background-image: url(/sunnyside-landing-page/imgs/desktop/image-stand-out.jpg);
   background-size: cover;
 }
 .section4 {
@@ -159,7 +159,7 @@ h6 {
   display: flex;
 }
 .section4-left {
-  background-image: url(mertdanis.github.io/blob/main/sunnyside-landing-page/imgs/desktop/image-graphic-design.jpg);
+  background-image: url(/sunnyside-landing-page/imgs/desktop/image-graphic-design.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   flex-basis: 50%;
@@ -176,7 +176,7 @@ h6 {
   color: hsl(167, 40%, 24%);
 }
 .section4-right {
-  background-image: url(mertdanis.github.io/blob/main/sunnyside-landing-page/imgs/desktop/image-photography.jpg);
+  background-image: url(/sunnyside-landing-page/imgs/desktop/image-photography.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   flex-basis: 50%;
