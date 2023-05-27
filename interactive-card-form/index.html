@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Card Form</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Space+Grotesk:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="card">
+        <div class="card-container">
+          <div class="front-side">
+            <img src="/imgs/bg-card-front.png" class="front-side-img" />
+
+            <div class="front-side-big-circle"></div>
+            <div class="front-side-small-circle"></div>
+            <p class="front-side-card-number">0000 0000 0000 0000</p>
+            <div class="front-side-card-details">
+              <p class="front-side-cardholder-name">MERT DANIS</p>
+              <div class="front-side-exp-date">
+                <span class="expdateMM">00</span>
+                <span>/</span>
+                <span class="expdateYY">00</span>
+              </div>
+            </div>
+          </div>
+          <div class="back-side">
+            <img src="/imgs/bg-card-back.png" class="back-side-img" />
+            <p class="back-side-cvc">000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form">
+        <form>
+          <div class="form-container">
+
+          
+          <div class="form-first-step">
+            <p class="cardholder-name form-title">cardholder name</p>
+            <input
+              placeholder="e.g. Jane Appleseed"
+              type="text"
+              class="name-input"
+              id="input"
+              onkeydown="return (event.keyCode>=65 && event.keyCode<=90 || event.keyCode==8 ||  event.keyCode==32);
+              "
+            />
+          </div>
+
+          <div class="form-second-step">
+            <p class="card-number form-title">card number</p>
+            <input
+              placeholder="e.g. 1234 5678 9123 0000"
+              type="text"
+              pattern="\d*"
+              maxlength="16"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+
+              id="input"
+              class="name-input card-number-input"
+            />
+          </div>
+
+          <div class="form-third">
+            <p class="exp-date form-title">exp. date (mm/yy)</p>
+            <div class="form-third-flex">
+              <input
+                placeholder="MM"
+                id="mm"
+                type="text"
+                pattern="\d*"
+                maxlength="2"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+  
+          
+                class="name-input input-s mm"
+              />
+              <input
+                placeholder="YY"
+                id="yy"
+                type="text"
+                maxlength="2"
+                class="name-input input-s yy"
+                pattern="\d*"
+                maxlength="2"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              />
+
+              <input
+                placeholder="e.g. 123"
+                type="text"
+                maxlength="3"
+                id="input"
+                class="name-input input-m "
+                pattern="\d*"
+
+                maxlength="3"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+  
+              />
+            </div>
+          </div>
+          <button class="form-button">Confirm</button>
+
+        </form>
+      </div>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
