@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="./style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,23 +14,22 @@
     <title>SunnySide Landing Page</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header-list">
+        <img src="./imgs/logo.svg" alt="logo of the page" class="header-logo" />
+        <ul class="header-list-ul">
+          <li class="header-list-ul-item">About</li>
+          <li class="header-list-ul-item">Services</li>
+          <li class="header-list-ul-item">Projects</li>
+          <button class="header-list-btn">CONTACT</button>
+        </ul>
+      </div>
+      <div class="header-mid">
+        <h2 class="header-tag">we are creatives</h2>
+        <img src="./imgs/icon-arrow-down.svg" alt="arrow-icon" />
+      </div>
+    </header>
     <main>
-      <header class="header">
-        <div class="header-list">
-          <img src="/imgs/logo.svg" alt="" class="header-logo" />
-          <ul class="header-list-ul">
-            <li class="header-list-ul-item">About</li>
-            <li class="header-list-ul-item">Services</li>
-            <li class="header-list-ul-item">Projects</li>
-            <button class="header-list-btn">CONTACT</button>
-          </ul>
-        </div>
-        <div class="header-mid">
-          <h2 class="header-tag">we are creatives</h2>
-          <img src="/imgs/icon-arrow-down.svg" />
-        </div>
-      </header>
-
       <div class="section2" id="section2">
         <div class="section2-left">
           <h3 class="section2-left-tag">Transform your brand</h3>
@@ -81,7 +80,11 @@
         <h3 class="section5-tag">client testimonials</h3>
         <div class="section5-div-container">
           <div class="section5-div">
-            <img src="/imgs/image-emily.jpg" alt="" class="section5-div-img" />
+            <img
+              src="./imgs/image-emily.jpg"
+              alt="user"
+              class="section5-div-img"
+            />
             <p class="section5-div-p">
               We put our trust in Sunnyside and they delivered, making sure our
               needs were met and deadlines were always hit.
@@ -90,7 +93,11 @@
             <p class="section5-div-position">Marketing Director</p>
           </div>
           <div class="section5-div">
-            <img src="/imgs/image-thomas.jpg" alt="" class="section5-div-img" />
+            <img
+              src="./imgs/image-thomas.jpg"
+              alt="user2"
+              class="section5-div-img"
+            />
             <p class="section5-div-p">
               Sunnyside’s enthusiasm coupled with their keen interest in our
               brand’s success made it a satisfying and enjoyable experience.
@@ -99,7 +106,11 @@
             <p class="section5-div-position">Chief Operating Officer</p>
           </div>
           <div class="section5-div">
-            <img src="/imgs/image-jennie.jpg" alt="" class="section5-div-img" />
+            <img
+              src="./imgs/image-jennie.jpg"
+              alt="user3"
+              class="section5-div-img"
+            />
             <p class="section5-div-p">
               Incredible end result! Our sales increased over 400% when we
               worked with Sunnyside. Highly recommended!
@@ -111,28 +122,33 @@
       </div>
 
       <div class="section6">
-        <img src="/imgs/desktop/image-gallery-milkbottles.jpg" alt="" />
-        <img src="/imgs/desktop/image-gallery-orange.jpg" alt="" />
-        <img src="/imgs/desktop/image-gallery-cone.jpg" alt="" />
-        <img src="/imgs/desktop/image-gallery-sugarcubes.jpg" alt="" />
+        <img
+          src="./imgs/desktop/image-gallery-milkbottles.jpg"
+          alt="milkbottle"
+        />
+        <img src="./imgs/desktop/image-gallery-orange.jpg" alt="orange" />
+        <img src="./imgs/desktop/image-gallery-cone.jpg" alt="cone" />
+        <img
+          src="./imgs/desktop/image-gallery-sugarcubes.jpg"
+          alt="sugarcubes"
+        />
       </div>
-
-      <footer class="footer">
-        <img src="/imgs/logo.svg" alt="" class="footer-logo" />
-        <ul class="footer-list">
-          <li class="footer-list-item">About</li>
-          <li class="footer-list-item">Services</li>
-          <li class="footer-list-item">Projects</li>
-        </ul>
-        <div class="footer-social">
-          <img src="/imgs/icon-facebook.svg" alt="" id="facebook" />
-          <img src="/imgs/icon-instagram.svg" alt="" id="instagram" />
-          <img src="/imgs/icon-twitter.svg" alt="" id="twitter" />
-          <img src="/imgs/icon-pinterest.svg" alt="" id="pinterest" />
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <img src="./imgs/logo.svg" alt="footer-logo" class="footer-logo" />
+      <ul class="footer-list">
+        <li class="footer-list-item">About</li>
+        <li class="footer-list-item">Services</li>
+        <li class="footer-list-item">Projects</li>
+      </ul>
+      <div class="footer-social">
+        <img src="./imgs/icon-facebook.svg" alt="fblogo" id="facebook" />
+        <img src="./imgs/icon-instagram.svg" alt="iglogo" id="instagram" />
+        <img src="./imgs/icon-twitter.svg" alt="twlogo" id="twitter" />
+        <img src="./imgs/icon-pinterest.svg" alt="ptlogo" id="pinterest" />
+      </div>
+    </footer>
 
-    <script src="/app.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

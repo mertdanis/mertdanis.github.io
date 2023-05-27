@@ -469,6 +469,10 @@ html {
     &--img {
       cursor: pointer;
       height: 2.5rem;
+
+      &:hover {
+        color: orange;
+      }
     }
 
     &:hover {
