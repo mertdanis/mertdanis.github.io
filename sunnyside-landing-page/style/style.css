@@ -242,7 +242,6 @@ h6 {
 .section6 {
   display: flex;
   overflow: hidden;
-  min-height: 60vh;
 }
 .section6 img {
   height: 60rem;
