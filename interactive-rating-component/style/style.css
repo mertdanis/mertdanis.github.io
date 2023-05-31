@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+}
+body p {
+  line-height: 1.6em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  background: linear-gradient(to bottom right, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+  padding: 4rem;
+  font-size: 2rem;
+  border-radius: 2rem;
+  max-width: 40rem;
+}
+.container-star {
+  margin: 0 0 2rem 0;
+}
+.container-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+.container-text {
+  color: gray;
+  font-size: 1.6rem;
+  line-height: 1.6em;
+  margin-bottom: 1rem;
+}
+.container-rating-list {
+  display: flex;
+  gap: 2.5rem;
+}
+.container-rating-list-item {
+  height: 5rem;
+  width: 7rem;
+  padding: 1rem 0;
+  border-radius: 50%;
+  display: flex;
+  background-color: hsla(217, 12%, 63%, 0.205);
+  align-items: center;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  margin: 1rem 0;
+  transition: 300ms;
+}
+.container-rating-list-item:hover {
+  cursor: pointer;
+  background-color: orangered;
+}
+.container-btn {
+  border: none;
+  background-color: hsl(25, 97%, 53%);
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  color: white;
+  font-family: inherit;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  margin: 2rem 0 0 0;
+  transition: 500ms;
+}
+.container-btn:hover {
+  cursor: pointer;
+  background-color: hsla(217, 12%, 63%, 0.158);
+}
+
+.active {
+  background-color: orangered !important;
+}
+
+.submitContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.submitContent-img {
+  margin: 0 0 4rem 0;
+}
+.submitContent-score {
+  margin: 0 0 4rem 0;
+  font-size: 1.7rem;
+  background-color: hsla(217, 12%, 63%, 0.158);
+  border-radius: 3rem;
+  padding: 1rem;
+  text-align: center;
+  color: hsl(25, 97%, 53%);
+}
+.submitContent-title {
+  font-size: 3rem;
+  margin: 0 0 2rem 0;
+}
+.submitContent-text {
+  color: rgb(197, 197, 197);
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    margin: 0 2rem;
+    max-width: 90vw;
+  }
+  .container-rating-list {
+    gap: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
