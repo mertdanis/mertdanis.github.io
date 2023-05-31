@@ -116,13 +116,20 @@ body {
     margin: 0 2rem;
     gap: 2rem;
   }
+  .container-left {
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .container-right {
     max-width: 35rem;
+    margin: 2rem;
   }
   .container-right-left {
-    top: 12.5rem;
-    right: 9rem;
-    padding: 2rem;
+    right: 2.4rem;
+    padding: 2.2rem;
     font-size: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

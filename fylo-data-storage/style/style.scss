@@ -26,7 +26,7 @@ body {
   //   ),
   //   url(/imgs/bg-desktop.png);
 
-  background-image: url(./imgs/bg-desktop.png),
+  background-image: url(/imgs/bg-desktop.png),
     linear-gradient(to right, hsl(229, 57%, 11%), hsl(229, 57%, 11%));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: bottom, left, right;
@@ -129,7 +129,7 @@ body {
 
 @media only screen and (max-width: 1000px) {
   body {
-    background-image: url(./imgs/bg-mobile.png);
+    background-image: url(/imgs/bg-mobile.png);
     background-size: cover;
   }
 
@@ -137,13 +137,21 @@ body {
     flex-direction: column;
     margin: 0 2rem;
     gap: 2rem;
+
+    &-left {
+      margin: 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     &-right {
       max-width: 35rem;
-
+      margin: 2rem;
       &-left {
-        top: 12.5rem;
-        right: 9rem;
-        padding: 2rem;
+        right: 2.4rem;
+        padding: 2.2rem;
         font-size: 2.5rem;
       }
     }
