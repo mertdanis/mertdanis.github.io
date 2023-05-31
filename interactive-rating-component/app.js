@@ -5,7 +5,7 @@ let submitBtn = document.querySelector(".container-btn");
 let submitContent = `  <div class="submitContent">
 
           
-<img class="submitContent-img" src="/imgs/illustration-thank-you.svg" alt="">
+<img class="submitContent-img" src="./imgs/illustration-thank-you.svg" alt="">
 <p class="submitContent-score">You selected 4 out of 5</p>
 <h4 class="submitContent-title">Thank you!</h4>
 <p class="submitContent-text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
