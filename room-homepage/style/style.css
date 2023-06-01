@@ -36,7 +36,7 @@ body a {
 }
 
 .section1 {
-  background-image: url(/imgs/desktop-image-hero-1.jpg);
+  background-image: url(mertdanis.github.io/blob/main/room-homepage/imgs/desktop-image-hero-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   flex-basis: 150%;
@@ -132,7 +132,7 @@ body a {
   transition: 300ms;
 }
 .section3 {
-  background: url(/imgs/image-about-dark.jpg);
+  background: url(mertdanis.github.io/blob/main/room-homepage/imgs/image-about-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom left;
@@ -156,7 +156,7 @@ body a {
   color: hsl(0, 0%, 63%);
 }
 .section5 {
-  background: url(/imgs/image-about-light.jpg);
+  background: url(mertdanis.github.io/blob/main/room-homepage/imgs/image-about-light.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
