@@ -235,7 +235,7 @@ body a {
     height: 6rem;
   }
   .section3 {
-    content: url(/imgs/image-about-dark.jpg);
+    content: url(/room-homepage/imgs/image-about-dark.jpg);
   }
   .section4 {
     padding: 5rem 3rem;
@@ -248,6 +248,6 @@ body a {
     font-size: 1.7rem;
   }
   .section5 {
-    content: url(/imgs/image-about-light.jpg);
+    content: url(/room-homepage/imgs/image-about-light.jpg);
   }
 }/*# sourceMappingURL=style.css.map */
