@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "League Spartan", sans-serif;
+}
+body p {
+  line-height: 1.6em;
+}
+body ul {
+  list-style-type: none;
+}
+body a {
+  text-decoration: none;
+}
+
+.container-top {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.container-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  min-height: 30vh;
+}
+
+.section1 {
+  background-image: url(/imgs/desktop-image-hero-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-basis: 150%;
+  display: flex;
+  padding: 9rem 0 0 9rem;
+  gap: 7rem;
+  transition: 300ms;
+}
+.section1-hamburger {
+  display: none;
+}
+.section1-hamburger-menu {
+  display: none;
+}
+.section1-logo {
+  height: 2rem;
+  transition: 300ms;
+}
+.section1-logo:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+.section1-list {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 2rem;
+}
+.section1-list-item a {
+  color: white;
+  transition: 300ms;
+}
+.section1-list-item a:hover {
+  color: orangered;
+}
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12rem;
+  gap: 2rem;
+  position: relative;
+}
+.section2-title {
+  font-size: 6rem;
+}
+.section2-text {
+  font-size: 2rem;
+  color: hsl(0, 0%, 63%);
+}
+.section2-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.section2-arrow-left, .section2-arrow-right {
+  height: 9rem;
+  transition: 300ms;
+  background-color: black;
+}
+.section2-arrow-left:hover, .section2-arrow-right:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.section2-arrow-left {
+  padding: 1rem 3rem;
+}
+.section2-arrow-right {
+  padding: 1rem 3rem;
+}
+.section2-shop {
+  display: flex;
+  align-items: center;
+  transition: 300ms;
+  gap: 2rem;
+}
+.section2-shop:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.section2-shoparrow {
+  height: 1.5rem;
+}
+.section2-shoptext {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  font-weight: 700;
+  margin: 2rem 0;
+  transition: 300ms;
+}
+.section3 {
+  background: url(/imgs/image-about-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+}
+.section4 {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 6rem 0 6rem;
+}
+.section4-title {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+.section4-text {
+  font-size: 2rem;
+  line-height: 1.6em;
+  color: hsl(0, 0%, 63%);
+}
+.section5 {
+  background: url(/imgs/image-about-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-top {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .container-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .section1 {
+    background-position: top;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    padding: 7rem;
+  }
+  .section1-hamburger {
+    display: inline-block;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .section1-hamburger-menu {
+    background-color: white;
+    display: flex;
+    gap: 5rem;
+    padding: 4rem;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    transition: 300ms;
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+    margin-top: -100%;
+  }
+  .section1-hamburger-menu-list {
+    display: flex;
+    gap: 2rem;
+  }
+  .section1-hamburger-menu-list a {
+    color: black;
+  }
+  .section1-list {
+    display: none;
+  }
+  .section2 {
+    padding: 5rem 3rem;
+  }
+  .section2-title {
+    font-size: 3.5rem;
+  }
+  .section2-text {
+    font-size: 1.7rem;
+  }
+  .section2-shoptext {
+    letter-spacing: 1rem;
+  }
+  .section2-arrow {
+    top: -6rem;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+  .section2-arrow-left, .section2-arrow-right {
+    padding: 1rem 2rem;
+    height: 6rem;
+  }
+  .section3 {
+    content: url(/imgs/image-about-dark.jpg);
+  }
+  .section4 {
+    padding: 5rem 3rem;
+  }
+  .section4-title {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
+  .section4-text {
+    font-size: 1.7rem;
+  }
+  .section5 {
+    content: url(/imgs/image-about-light.jpg);
+  }
+}/*# sourceMappingURL=style.css.map */

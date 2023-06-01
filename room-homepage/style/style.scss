@@ -1,0 +1,307 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+$transition: 300ms;
+$text-color: hsl(0, 0%, 63%);
+
+body {
+  font-size: 1.2rem;
+  font-family: "League Spartan", sans-serif;
+
+  & p {
+    line-height: 1.6em;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.container {
+  &-top {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  &-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    min-height: 30vh;
+  }
+}
+
+.section {
+  &1 {
+    background-image: url(/imgs/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 150%;
+    display: flex;
+    padding: 9rem 0 0 9rem;
+    gap: 7rem;
+    transition: $transition;
+
+    &-hamburger {
+      display: none;
+
+      &-menu {
+        display: none;
+      }
+    }
+
+    &-logo {
+      height: 2rem;
+      transition: $transition;
+      &:hover {
+        cursor: pointer;
+
+        scale: 1.1;
+      }
+    }
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      font-size: 2rem;
+
+      &-item {
+        & a {
+          color: white;
+          transition: $transition;
+        }
+        & a:hover {
+          color: orangered;
+        }
+      }
+    }
+  }
+
+  &2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12rem;
+    gap: 2rem;
+    position: relative;
+
+    &-title {
+      font-size: 6rem;
+    }
+
+    &-text {
+      font-size: 2rem;
+      color: $text-color;
+    }
+
+    &-arrow {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+
+      &-left,
+      &-right {
+        height: 9rem;
+        transition: $transition;
+        background-color: black;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+
+      &-left {
+        padding: 1rem 3rem;
+      }
+
+      &-right {
+        padding: 1rem 3rem;
+      }
+    }
+
+    &-shop {
+      display: flex;
+      align-items: center;
+      transition: $transition;
+      gap: 2rem;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+
+      &arrow {
+        height: 1.5rem;
+      }
+
+      &text {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 2rem;
+        font-weight: 700;
+        margin: 2rem 0;
+        transition: 300ms;
+      }
+    }
+  }
+
+  &3 {
+    background: url(/imgs/image-about-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+  }
+
+  &4 {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 6rem 0 6rem;
+    &-title {
+      font-size: 2rem;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      font-size: 2rem;
+      line-height: 1.6em;
+      color: $text-color;
+    }
+  }
+
+  &5 {
+    background: url(/imgs/image-about-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .section {
+    &1 {
+      background-position: top;
+      background-size: cover;
+      min-height: 50vh;
+      display: flex;
+      padding: 7rem;
+      &-hamburger {
+        display: inline-block;
+        height: fit-content;
+        &-menu {
+          background-color: white;
+          display: flex;
+          gap: 5rem;
+          padding: 4rem;
+          font-size: 2rem;
+          align-items: center;
+          justify-content: center;
+          transition: 300ms;
+          position: absolute;
+          top: 0;
+          min-width: 100%;
+          margin-top: -100%;
+          &-list {
+            display: flex;
+            gap: 2rem;
+
+            & a {
+              color: black;
+            }
+          }
+        }
+      }
+
+      &-list {
+        display: none;
+      }
+    }
+
+    &2 {
+      padding: 5rem 3rem;
+
+      &-title {
+        font-size: 3.5rem;
+      }
+
+      &-text {
+        font-size: 1.7rem;
+      }
+
+      &-shoptext {
+        letter-spacing: 1rem;
+      }
+
+      &-arrow {
+        top: -6rem;
+        right: 0;
+        bottom: auto;
+        left: auto;
+
+        &-left,
+        &-right {
+          padding: 1rem 2rem;
+          height: 6rem;
+        }
+      }
+    }
+
+    &3 {
+      content: url(/imgs/image-about-dark.jpg);
+    }
+
+    &4 {
+      padding: 5rem 3rem;
+
+      &-title {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+      }
+
+      &-text {
+        font-size: 1.7rem;
+      }
+    }
+
+    &5 {
+      content: url(/imgs/image-about-light.jpg);
+    }
+  }
+}
