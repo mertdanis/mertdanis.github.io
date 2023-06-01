@@ -67,3 +67,5 @@ let mainFunction = () => {
 };
 
 mainFunction();
+
+console.log("ascas");
