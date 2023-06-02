@@ -516,6 +516,20 @@ html {
 
     &2 {
       width: auto;
+      margin: 0;
+
+      &__content {
+        &-title {
+          font-size: 3rem;
+          margin: 2rem 0;
+          width: auto;
+        }
+
+        &-desc {
+          width: auto;
+          font-size: 1.9rem;
+        }
+      }
     }
   }
   .flex-container {

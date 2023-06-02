@@ -440,6 +440,16 @@ html {
   }
   .section2 {
     width: auto;
+    margin: 0;
+  }
+  .section2__content-title {
+    font-size: 3rem;
+    margin: 2rem 0;
+    width: auto;
+  }
+  .section2__content-desc {
+    width: auto;
+    font-size: 1.9rem;
   }
   .flex-container {
     margin: 0;
