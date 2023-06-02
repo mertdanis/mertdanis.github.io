@@ -42,6 +42,35 @@ html {
   margin-right: 35vh;
   border-bottom: 1px solid $color-dark-grayish-blue;
 
+  &-hamburger {
+    pointer-events: none;
+    transition: 300ms;
+    &-list {
+      position: absolute;
+      margin-left: -100vw;
+      top: 0;
+      background-color: white;
+      min-height: 100vh;
+      padding: 2rem;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      font-size: 2rem;
+      &-closeBtn {
+        margin: 2rem 0;
+        min-height: 3rem;
+      }
+
+      &-item a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+
   &__logo {
     height: 2.5rem;
     margin-right: 3rem;
@@ -494,8 +523,17 @@ html {
 
   .header {
     margin: 0;
+
     &__list {
       display: none;
+    }
+
+    &-hamburger {
+      display: inline-block;
+      margin-top: 0.7rem;
+      margin-right: 2rem;
+      margin-left: 1rem;
+      pointer-events: auto;
     }
   }
 
@@ -518,7 +556,29 @@ html {
       width: auto;
       margin: 0;
 
+      &__buy {
+        width: auto;
+        flex-direction: column;
+
+        &-total--container {
+          width: 100%;
+          margin: 2rem 0;
+          border-radius: 1rem;
+          padding: 1rem;
+          background-color: rgb(235, 239, 243);
+        }
+
+        &--addtocart {
+          margin: 0;
+          width: 90%;
+        }
+      }
+
       &__content {
+        &-price--box {
+          justify-content: space-between;
+        }
+
         &-title {
           font-size: 3rem;
           margin: 2rem 0;
@@ -536,4 +596,33 @@ html {
     margin: 0;
     flex-direction: column;
   }
+}
+
+.header__cart-btn--abs {
+  transform: none;
+  top: 10vh;
+  right: -19vw;
+  padding: 1rem;
+  width: 90vw;
+
+  &---flex {
+    flex-direction: column;
+  }
+}
+
+.popup {
+  &__main {
+    transform: translateX(0rem) translateY(20%);
+    &--img {
+      height: 35rem;
+    }
+  }
+
+  &__buttons {
+    display: none;
+  }
+}
+
+.section1__thumbnail {
+  height: 7rem;
 }

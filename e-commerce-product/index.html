@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/e74c20388e.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -20,6 +24,23 @@
   </head>
 
   <header class="header">
+    <div class="header-hamburger-container">
+      <i id="hamburgerBtn" class="fa-solid fa-bars fa-2xl header-hamburger"></i>
+
+      <ul class="header-hamburger-list">
+        <img
+          src="/images/icon-close.svg"
+          alt="close-btn"
+          class="header-hamburger-list-closeBtn"
+        />
+        <li class="header-hamburger-list-item"><a href="#">Collections</a></li>
+        <li class="header-hamburger-list-item"><a href="#">Men</a></li>
+        <li class="header-hamburger-list-item"><a href="#">Women</a></li>
+        <li class="header-hamburger-list-item"><a href="#">About</a></li>
+        <li class="header-hamburger-list-item"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
     <img src="./images/logo.svg" alt="logo" class="header__logo" />
     <ul class="header__list">
       <li class="header__item">collections</li>

@@ -21,6 +21,13 @@ let number_Order = document.querySelector(
   `.header__cart-btn--abs---ordernumber`
 );
 
+let hamburgerBtn = document.querySelector(`#hamburgerBtn`);
+
+let hamburgerMenu = document.querySelector(".header-hamburger-list");
+
+let hamburgerCloseBtn = document.querySelector(
+  ".header-hamburger-list-closeBtn"
+);
 // images
 
 let img1 = document.querySelector(`.thumbnail1`);
@@ -165,3 +172,15 @@ thumbnailHandler(img1, `images/image-product-1.jpg`);
 thumbnailHandler(img2, `images/image-product-2.jpg`);
 thumbnailHandler(img3, `images/image-product-3.jpg`);
 thumbnailHandler(img4, `images/image-product-4.jpg`);
+
+const hamburgerHandler = () => {
+  hamburgerBtn.addEventListener("click", () => {
+    hamburgerMenu.style.marginLeft = "-5vw";
+  });
+
+  hamburgerCloseBtn.addEventListener("click", () => {
+    hamburgerMenu.style.marginLeft = "-100vw";
+  });
+};
+
+hamburgerHandler();
