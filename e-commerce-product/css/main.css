@@ -467,7 +467,7 @@ html {
     height: 40vh;
     -o-object-fit: contain;
        object-fit: contain;
-    content: url(/images/image-product-1.jpg);
+    content: url(/e-commerce-product/images/image-product-1.jpg);
   }
   .section1__thumbnails {
     display: none;
