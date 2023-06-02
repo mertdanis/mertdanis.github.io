@@ -43,6 +43,8 @@ html {
   border-bottom: 1px solid $color-dark-grayish-blue;
 
   &-hamburger {
+    margin-left: -100vw;
+
     pointer-events: none;
     transition: 300ms;
     &-list {
@@ -530,7 +532,7 @@ html {
 
     &-hamburger {
       display: inline-block;
-      margin-top: 0.7rem;
+      margin-top: 1.7rem;
       margin-right: 2rem;
       margin-left: 1rem;
       pointer-events: auto;

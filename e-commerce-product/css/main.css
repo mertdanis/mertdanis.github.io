@@ -24,6 +24,7 @@ html {
   border-bottom: 1px solid hsl(220, 14%, 75%);
 }
 .header-hamburger {
+  margin-left: -100vw;
   pointer-events: none;
   transition: 300ms;
 }
@@ -453,7 +454,7 @@ html {
   }
   .header-hamburger {
     display: inline-block;
-    margin-top: 0.7rem;
+    margin-top: 1.7rem;
     margin-right: 2rem;
     margin-left: 1rem;
     pointer-events: auto;
