@@ -527,7 +527,6 @@ html {
 .popup__buttons {
   display: none;
 }
-
-.section1__thumbnail {
+.popup .section1__thumbnail {
   height: 7rem;
 }/*# sourceMappingURL=main.css.map */
