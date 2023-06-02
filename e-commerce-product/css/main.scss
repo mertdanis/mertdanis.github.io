@@ -486,3 +486,40 @@ html {
     pointer-events: auto;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 0 2rem;
+  }
+
+  .header {
+    margin: 0;
+    &__list {
+      display: none;
+    }
+  }
+
+  .section {
+    &1 {
+      margin: 0;
+      &__main-img {
+        margin: 2rem 0;
+        height: 40vh;
+        object-fit: contain;
+        content: url(/images/image-product-1.jpg);
+      }
+
+      &__thumbnails {
+        display: none;
+      }
+    }
+
+    &2 {
+      width: auto;
+    }
+  }
+  .flex-container {
+    margin: 0;
+    flex-direction: column;
+  }
+}

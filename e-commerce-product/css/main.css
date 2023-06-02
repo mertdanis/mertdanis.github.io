@@ -403,6 +403,9 @@ html {
   cursor: pointer;
   height: 2.5rem;
 }
+.popup__close--img:hover {
+  color: orange;
+}
 .popup__close:hover {
   color: hsl(26, 100%, 55%);
 }
@@ -410,4 +413,36 @@ html {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin: 0 2rem;
+  }
+  .header {
+    margin: 0;
+  }
+  .header__list {
+    display: none;
+  }
+  .section1 {
+    margin: 0;
+  }
+  .section1__main-img {
+    margin: 2rem 0;
+    height: 40vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    content: url(/images/image-product-1.jpg);
+  }
+  .section1__thumbnails {
+    display: none;
+  }
+  .section2 {
+    width: auto;
+  }
+  .flex-container {
+    margin: 0;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */
