@@ -598,32 +598,32 @@ html {
     margin: 0;
     flex-direction: column;
   }
-}
 
-.header__cart-btn--abs {
-  transform: none;
-  top: 10vh;
-  right: -19vw;
-  padding: 1rem;
-  width: 90vw;
+  .header__cart-btn--abs {
+    transform: none;
+    top: 10vh;
+    right: -19vw;
+    padding: 1rem;
+    width: 90vw;
 
-  &---flex {
-    flex-direction: column;
-  }
-}
-
-.popup {
-  &__main {
-    transform: translateX(0rem) translateY(20%);
-    &--img {
-      height: 35rem;
+    &---flex {
+      flex-direction: column;
     }
   }
 
-  &__buttons {
-    display: none;
-  }
-  .section1__thumbnail {
-    height: 7rem;
+  .popup {
+    &__main {
+      transform: translateX(0rem) translateY(20%);
+      &--img {
+        height: 35rem;
+      }
+    }
+
+    &__buttons {
+      display: none;
+    }
+    .section1__thumbnail {
+      height: 7rem;
+    }
   }
 }
