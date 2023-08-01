@@ -3,18 +3,15 @@ let contentDice = document.querySelector(`.content-dice`);
 let contentTitle = document.querySelector(`.content-title`);
 let contentAdvice = document.querySelector(`.content-advice`);
 
-let getAdvice = () => {
-  fetch(`https://api.adviceslip.com/advice
-  `)
-    .then((response) => {
-      return response.json();
-    })
-    .then((adviceData) => {
-      let adviceAPI = adviceData.slip;
+let getAdvice = async () => {
+  const data = await fetch("https://api.adviceslip.com/advice");
 
-      contentAdvice.textContent = `“${adviceAPI.advice}”`;
-      contentTitle.textContent = `advice #${adviceAPI.id}`;
-    });
+  const res = await data.json();
+
+  let adviceAPI = res.slip;
+
+  contentAdvice.textContent = `“${adviceAPI.advice}”`;
+  contentTitle.textContent = `advice #${adviceAPI.id}`;
 };
 
 window.onload = () => {
